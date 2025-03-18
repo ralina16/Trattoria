@@ -809,7 +809,7 @@ h2 {
 }
 
 .rewards .card {
-    max-width: 21vw;
+    max-width: 27vw;
 }
 
 .rewards-background {
@@ -854,9 +854,9 @@ h2 {
     font-family: 'Manrope', sans-serif;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .rewards .card {
-        max-width: 21vw;
+        max-width: 31vw;
         min-width: 29vw;
     }
 }
