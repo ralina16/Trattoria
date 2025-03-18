@@ -810,6 +810,7 @@ h2 {
 
 .rewards .card {
     max-width: 27vw;
+    min-width: 21vw;
 }
 
 .rewards-background {
