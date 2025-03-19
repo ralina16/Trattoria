@@ -98,7 +98,92 @@
     <!-- about start -->
      <div class="about container">
         <h2>о нас</h2>
-
+            <style>
+                body {
+                    background-color: #1a1a1a;
+                    color: #f0e6d2;
+                    font-family: 'Arial', sans-serif;
+                }
+                .section-title {
+                    color: #f0e6d2;
+                    margin-bottom: 20px;
+                }
+                .world-map {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .faq-question {
+                    cursor: pointer;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #333;
+                }
+                .faq-answer {
+                    display: none;
+                    padding: 10px 0;
+                }
+                .faq-question.active + .faq-answer {
+                    display: block;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2 class="section-title">О НАС</h2>
+                        <h3>НАША ИСТОРИЯ</h3>
+                        <p>Трентино был создан в любви к настоящей итальянской кухне и семейным традициям. наша семья предлагает блюда, которые передают искренность и тепло итальянских столов, используя только свежие ингредиенты.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <h2 class="section-title">12 346</h2>
+                        <p>клиентов посетили наш ресторан</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <h3>МИРОВЫЕ ВКУСЫ НА ВАШЕМ СТОЛЕ</h3>
+                        <ol>
+                            <li>Грильсом лучшие ингредиенты разных стран</li>
+                            <li>Используются свежие продукты и экологически чистые</li>
+                            <li>Представляем разнообразнейшую культуру в каждом блюде</li>
+                        </ol>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="path/to/world-map.png" alt="World Map" class="world-map">
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <h3>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h3>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleAnswer(this)">Нужна ли предварительная бронь стола?</div>
+                            <div class="faq-answer">Рекомендуем бронировать столик заранее, особенно в выходные дни и праздники, чтобы гарантировать наличие свободных мест. Чтобы забронировать столик, свяжитесь с нами по телефону или используйте онлайн-форму на нашем сайте.</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleAnswer(this)">Какое меню предлагает ресторан "Раттория"?</div>
+                            <div class="faq-answer">Ответ на вопрос...</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleAnswer(this)">Есть ли в меню блюда для людей с аллергиями или специальными диетами?</div>
+                            <div class="faq-answer">Ответ на вопрос...</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleAnswer(this)">Предоставляете ли ресторан услуги по организации банкетов и мероприятий?</div>
+                            <div class="faq-answer">Ответ на вопрос...</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleAnswer(this)">Есть ли у вас парковка для гостей?</div>
+                            <div class="faq-answer">Ответ на вопрос...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <script>
+                function toggleAnswer(question) {
+                    question.classList.toggle('active');
+                }
+            </script>
         
      </div>
     <!-- about end -->

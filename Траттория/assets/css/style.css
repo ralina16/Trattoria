@@ -781,12 +781,18 @@ h2 {
     margin-top: 15px;
 }
 
-.carousel-indicators button {
-    background-color: #fff;
-    width: 10px;
-    height: 10px;
+.carousel-indicators [data-bs-target] {
+    background-color: #FACE8D;
+    width: 12px;
+    height: 12px;
 }
 
+@media (max-width: 768px) {
+    .carousel-indicators [data-bs-target] {
+        width: 9px;
+        height: 9px;
+    }
+}
 /* gallery end */
 
 /* reviews start */
@@ -810,6 +816,7 @@ h2 {
 
 .rewards .card {
     max-width: 27vw;
+    min-width: 21vw;
 }
 
 .rewards-background {
@@ -953,6 +960,11 @@ h2 {
     justify-content: end;
 }
 
+#map {
+    width: 100%;
+    height: 400px;
+}
+
 @media (max-width: 1200px) {
     .contacts h3 {
         font-size: 1.4em;
@@ -974,6 +986,11 @@ h2 {
 
     .contact-icon img {
         width: 40px;
+    }
+
+    
+    #map {
+        height: 260px;
     }
 }
 
@@ -1007,6 +1024,16 @@ h2 {
 
     .contacts-inform {
         gap: 30px;
+    }
+
+    #map {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        height: 200px;
     }
 }
 
