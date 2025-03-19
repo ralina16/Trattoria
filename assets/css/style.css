@@ -85,7 +85,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
 .btn {
     font-size: 14px;
     border-radius: 0px;
@@ -145,7 +144,6 @@ body {
     bottom: -2.5px;
     left: 0;
 }
-
 
 @media screen and (max-width:2000px) {
     .header-logo {
@@ -304,6 +302,9 @@ h1 {
 
 /* Размер кнопки для телефонов */
 @media (max-width: 767px) {
+    .banner {
+        margin-top: 50px;
+    }
 
     .button-large img,
     .button-small img {
@@ -381,6 +382,7 @@ h2 {
 .card-body {
     background-color: #191919;
     border: 1px solid #272727;
+    gap: 18px;
 }
 
 .card-title {
@@ -396,9 +398,7 @@ h2 {
     color: #D9D9D9;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    margin-bottom: 0;
 }
 
 .card-info .btn {
@@ -424,6 +424,14 @@ h2 {
     letter-spacing: 0.02em;
     font-size: 18px;
     padding: 12px 22px;
+}
+
+.btn-outline-light {
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 0.02em;
+    font-size: 16px;
+    padding: 8px 22px;
 }
 
 @media (max-width: 1199px) {
@@ -501,6 +509,8 @@ h2 {
 
     .btn {
         font-size: 0.9em;
+        font-size: 13px;
+        padding: 5px 15px;
     }
 }
 
@@ -510,34 +520,95 @@ h2 {
     }
 
     .card-price {
-        font-size: 1.2em;
-    }
-
-    .card-text {
-        font-size: 0.8em;
+        font-size: 1.1em;
     }
 
     .btn {
-        font-size: 1em;
+        font-size: 0.8em;
     }
+}
 
+@media (max-width: 524px) {
     .card-title {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     .small {
+        font-size: 0.7em;
+    }
+
+    .card-text {
+        font-size: 0.6em;
+    }
+
+}
+
+@media (max-width: 468px) {
+    .card-text {
+        font-size: 0.57em;
+    }
+
+    .card-price {
+        font-size: 1em;
+    }
+
+    .btn {
+        font-size: 0.7em;
+    }
+
+    .card-body {
+        gap: 13px;
+    }
+}
+
+@media (max-width: 411px) {
+    .card-price {
         font-size: 0.9em;
     }
 
     .btn {
-        font-size: 0.8em;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 390px) {
+    .card-text {
+        font-size: 0.5em;
     }
 
-    .cat-cards .col {
-        display: flex;
+    .card-title {
+        font-size: 0.9em;
+    }
+
+    .small {
+        font-size: 0.6em;
+    }
+
+    .btn {
+        font-size: 0.7em !important;
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .card-body {
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 4px 13px;
+    }
+}
+
+@media (max-width: 388px) {
+    .cat-cards {
         flex-direction: column;
         align-items: center;
     }
+
+    .col {
+        min-width: 200px;
+    }
+
 }
 
 /* catalog end */
@@ -584,7 +655,7 @@ h2 {
     }
 
     .stat p {
-        font-size: 0.8em !important;
+        font-size: 0.8em;
     }
 }
 
@@ -605,7 +676,6 @@ h2 {
         font-size: 0.9em;
     }
 }
-
 
 
 @media (min-width: 769px) and (max-width: 1195px) {
@@ -633,7 +703,38 @@ h2 {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
+    .stats {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 430px) {
+    .stat p {
+        font-size: 0.8em;
+    }
+
+    .stats {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 382px) {
+    .about .description-text {
+        font-size: 0.75em;
+    }
+
+    .stat p {
+        font-size: 0.7em;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 340px) {
     .stats {
         flex-direction: column;
     }
@@ -642,6 +743,7 @@ h2 {
         gap: 10px;
     }
 }
+
 /* about end */
 
 /* order roles start */
@@ -680,6 +782,8 @@ h2 {
     font-weight: 500;
     letter-spacing: 0.07em;
     max-width: 260px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .action-box p {
@@ -726,39 +830,97 @@ h2 {
         font-size: 0.6em;
         max-width: 135px;
     }
+}
 
-    @media (max-width: 768px) {
-        .steak-image {
-            display: none;
-        }
+@media (max-width: 768px) {
 
-        .order-img {
-            width: 75px;
-            height: 70px;
-        }
 
-        .order-cards {
-            flex-direction: row !important;
-            z-index: 999;
-        }
-
-        .action-box span {
-            padding: 6px 8px;
-        }
+    .steak-image {
+        display: none;
     }
 
-    @media (max-width: 576px) {
-        .order-cards {
-            flex-direction: column !important;
-            z-index: 999;
-            gap: 15px !important;
-            align-items: center;
-        }
+    .order-img {
+        width: 75px;
+        height: 70px;
+    }
 
-        .menu-section {
-            gap: 40px;
-            min-width: 246px;
-        }
+    .order-cards {
+        flex-direction: row !important;
+        z-index: 999;
+    }
+
+    .action-box span {
+        padding: 6px 8px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .order-cards {
+        flex-direction: column;
+    }
+
+    .action-box {
+        width: 100%;
+    }
+
+    /* Первые две карточки в одну строку */
+    .action-box:nth-child(1),
+    .action-box:nth-child(2) {
+        flex: 1;
+        width: 48%;
+        /* Оставляем небольшой отступ между карточками */
+        margin-bottom: 1rem;
+    }
+
+    /* Третья карточка по центру */
+    .action-box:nth-child(3) {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Контейнер для первых двух карточек */
+    .order-cards-1 {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .menu-section {
+        width: 250px;
+    }
+
+    .order-cards {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0 !important;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+    .action-box p {
+        font-size: 0.55em;
+    }
+}
+
+@media (max-width: 346px) {
+    .action-box p {
+        font-size: 0.53em;
+    }
+}
+
+@media (max-width: 340px) {
+    .order-cards {
+        flex-direction: column !important;
+        z-index: 999;
+        gap: 15px !important;
+        align-items: center;
     }
 }
 
@@ -793,6 +955,7 @@ h2 {
         height: 9px;
     }
 }
+
 /* gallery end */
 
 /* reviews start */
@@ -988,7 +1151,7 @@ h2 {
         width: 40px;
     }
 
-    
+
     #map {
         height: 260px;
     }
@@ -1099,12 +1262,24 @@ h2 {
         align-items: center !important;
     }
 
+    .copyright {
+        font-size: 0.9em;
+    }
+
+    .footer-links a {
+        font-size: 0.8em;
+    }
+
     .footer .header-logo {
         margin-bottom: 1em;
     }
 
+    .footer-info {
+        padding: 10px 0 !important;
+    }
+
     .links {
-        justify-content: center !important;
+        gap: 3px !important;
     }
 }
 
@@ -1120,5 +1295,32 @@ h2 {
 
 
 /* about start */
+.about-pages h3 {
+    font-family: 'Catallina';
+    font-weight: 400;
+    font-size: 34px;
+    letter-spacing: 0.07em;
+    padding-bottom: 37px;
+}
+
+.world-map {
+    max-width: 100%;
+    height: auto;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px 0;
+}
+
+.faq-question.active+.faq-answer {
+    display: block;
+}
 
 /* about end */
