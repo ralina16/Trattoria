@@ -962,13 +962,11 @@ h2 {
     justify-content: center;
 }
 
-
-/* Фиксированная высота для изображений */
 .carousel-inner img {
-    width: 100%; /* Изображения занимают всю ширину колонки */
-    height: auto; /* Сохраняют пропорции */
-    max-height: 350px; /* Ограничение высоты */
-    object-fit: cover; /* Обрезка изображений для сохранения пропорций */
+    width: 100%;
+    height: auto;
+    max-height: 350px; 
+    object-fit: cover; 
 }
 
 /* Фиксированная высота для строки */
@@ -1013,8 +1011,8 @@ h2 {
 
 @media (max-width: 450px) {
     .carousel-inner .row > div {
-        flex: 0 0 80%;
-        max-width: 80%;
+        flex: 0 0 90%;
+        max-width: 90%;
     }
 
     .carousel-item .row {
