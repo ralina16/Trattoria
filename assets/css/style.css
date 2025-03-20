@@ -1011,10 +1011,10 @@ h2 {
     }
 }
 
-@media (max-width: 388px) {
+@media (max-width: 450px) {
     .carousel-inner .row > div {
-        flex: 0 0 80%; /* Каждая карточка занимает 100% ширины */
-        max-width: 80%; /* Ограничиваем максимальную ширину */
+        flex: 0 0 80%;
+        max-width: 80%;
     }
 
     .carousel-item .row {
@@ -1022,13 +1022,9 @@ h2 {
         justify-content: center;
     }
 
-    /* Скрываем последнюю картинку в каждом слайдере */
     .carousel-inner .row > div:last-child {
         display: none;
     }
-
-    /* Фиксированная высота для изображений */
-
 }
 
 /* gallery end */
@@ -1167,7 +1163,6 @@ h2 {
         font-size: 11px;
     }
 }
-
 /* reviews end */
 
 /* contacts start */
@@ -1292,7 +1287,6 @@ h2 {
         height: 200px;
     }
 }
-
 /* contacts end */
 
 /* footer start */
