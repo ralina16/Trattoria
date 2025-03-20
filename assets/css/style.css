@@ -1011,8 +1011,8 @@ h2 {
 
 @media (max-width: 450px) {
     .carousel-inner .row > div {
-        flex: 0 0 90%;
-        max-width: 90%;
+        flex: 0 0 95%;
+        max-width: 95%;
     }
 
     .carousel-item .row {
