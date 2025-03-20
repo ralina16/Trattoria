@@ -76,9 +76,8 @@ body {
     text-decoration: none;
 }
 
-.btn:hover {
-    background-color: #FACE8D;
-    color: #161616 !important;
+.catalog-btn:hover {
+  box-shadow: 0 0 3px #f8d49e7a;
 }
 
 @media screen and (max-width:1250px) {
@@ -131,9 +130,11 @@ body {
 }
 
 .btn:hover {
-    background-color: #FACE8D;
-    color: #161616 !important;
+  box-shadow: 0 0 2px #f8d49e7a;
+  transition: .5s ease-in-out;
+  border: 1px solid #584E3D;
 }
+
 
 .btn-header {
     font-size: 14px;
@@ -255,14 +256,15 @@ h1 {
     font-size: 30px;
 }
 
-.btn-outline-warning {
-    color: #FACE8D;
-    font-size: 14px;
-}
-
 .banner-btn {
     font-size: 18px;
     padding: 12px 21px;
+     color: #FACE8D;
+}
+
+.banner-btn:hover {
+      background-color: #FACE8D;
+    color: #161616 !important;
 }
 
 .button-large img {
@@ -416,6 +418,10 @@ h2 {
     background-color: #191919;
     border: 1px solid #272727;
     gap: 18px;
+}
+
+.card:hover {
+    box-shadow: 0 0 4px #272727;
 }
 
 .card-title {
