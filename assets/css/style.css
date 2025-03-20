@@ -962,11 +962,13 @@ h2 {
     justify-content: center;
 }
 
+
+/* Фиксированная высота для изображений */
 .carousel-inner img {
-    width: 100%;
-    height: auto;
-    max-height: 350px; 
-    object-fit: cover; 
+    width: 100%; /* Изображения занимают всю ширину колонки */
+    height: auto; /* Сохраняют пропорции */
+    max-height: 350px; /* Ограничение высоты */
+    object-fit: cover; /* Обрезка изображений для сохранения пропорций */
 }
 
 /* Фиксированная высота для строки */
@@ -1174,10 +1176,11 @@ h2 {
     font-weight: 600;
 }
 
-.contacts p {
+.contacts-block {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
     color: #d9d9d9;
+    text-decoration: none;
 }
 
 .contact-info {
@@ -1219,7 +1222,7 @@ h2 {
         font-size: 1.4em;
     }
 
-    .contact-info p {
+    .contacts-block  {
         font-size: 0.9em;
     }
 }
@@ -1229,14 +1232,13 @@ h2 {
         font-size: 1.2em;
     }
 
-    .contact-info p {
+    .contacts-block  {
         font-size: 0.7em;
     }
 
     .contact-icon img {
         width: 40px;
     }
-
 
     #map {
         height: 260px;
@@ -1254,7 +1256,7 @@ h2 {
         font-size: 1.3em;
     }
 
-    .contacts p {
+    .contacts-block  {
         font-size: 0.9em;
     }
 
