@@ -1518,6 +1518,7 @@ h2 {
     letter-spacing: 0.12em;
     padding-bottom: 30px;
     line-height: 1.5;
+    white-space: nowrap;
     color: #fcedd6;
 }
 
@@ -1571,6 +1572,15 @@ h2 {
     letter-spacing: 0.05em;
 }
 
+.cart-block {
+    padding: 50px 0;
+}
+
+.world-map {
+    max-width: 100%;
+    height: auto;
+}
+
 .faq-item {
     margin-bottom: 15px;
 }
@@ -1618,6 +1628,16 @@ h2 {
     padding-bottom: 0;
 }
 
+@media (max-width: 1250px) {
+    .faq-question {
+        font-size: 20px;
+    }
+
+    .faq-answer {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 1100px) {
     .about-info p {
         font-size: 0.9em;
@@ -1629,6 +1649,14 @@ h2 {
 
     .about-block p {
         font-size: 1.1em;
+    }
+
+    .faq-question {
+        font-size: 18px;
+    }
+
+    .faq-answer {
+        font-size: 15px;
     }
 }
 
@@ -1650,7 +1678,13 @@ h2 {
         max-width: 280px;
     }
 
+    .faq-question {
+        font-size: 17px !important;
+    }
 
+    .faq-answer {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 970px) {
@@ -1660,26 +1694,18 @@ h2 {
 
     .about-pages h3 {
         font-size: 26px;
+        white-space: nowrap;
     }
 
     .about-block {
         gap: 15px;
     }
 
-    .faq-question {
-        font-size: 18px;
-        padding: 8px;
-    }
-
-    .faq-answer {
-        font-size: 16px;
-        margin-top: 8px;
-    }
-
     .about-img-block,
     .world-map {
         max-width: 100%;
         height: auto;
+
     }
 
     .block h4 {
@@ -1730,22 +1756,14 @@ h2 {
         max-width: 100%;
     }
 
-    .faq-question {
-        font-size: 18px;
-    }
-
-    .faq-answer {
-        font-size: 16px;
+    .world-map {
+        margin: 0 auto;
     }
 
     .about-img-block,
     .world-map {
         width: 100%;
         height: auto;
-    }
-
-    .cart-block-info {
-        text-align: center;
     }
 
     .blocks {
@@ -1759,6 +1777,11 @@ h2 {
     .block p {
         font-size: 14px;
     }
+
+    .faq-icon {
+        width: 13px;
+        height: 13px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1767,20 +1790,12 @@ h2 {
     }
 
     .about-pages h3 {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .about-info p {
         font-size: 14px;
         max-width: 480px;
-    }
-
-    .faq-question {
-        font-size: 16px;
-    }
-
-    .faq-answer {
-        font-size: 14px;
     }
 
     .about-img-block,
@@ -1796,12 +1811,40 @@ h2 {
     .block p {
         font-size: 12px;
     }
+
+    .faq-question {
+        font-size: 15px !important;
+    }
+
+    .faq-answer {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 510px) {
     .about-info p {
         font-size: 13px;
         max-width: 460px;
+    }
+}
+
+@media (max-width: 425px) {
+    .faq-question {
+        font-size: 14px !important;
+    }
+
+    .faq-answer {
+        font-size: 11px !important;
+    }
+}
+
+@media (max-width: 345px) {
+    .faq-question {
+        font-size: 13px !important;
+    }
+
+    .faq-answer {
+        font-size: 11px !important;
     }
 }
 
