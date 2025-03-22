@@ -1487,7 +1487,6 @@ h2 {
         align-items: center !important;
     }
 
-
     .footer .header-logo {
         margin-bottom: 1em;
         font-size: 1.5em;
@@ -1498,6 +1497,27 @@ h2 {
         display: none;
     }
 }
+
+@media (max-width: 576px) {
+    .copyright {
+        font-size: 15px;
+    }
+
+    .footer-links a {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 345px) {
+    .copyright {
+        font-size: 13px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+}
+
 
 /* footer end */
 
