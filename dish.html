@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Траттория</title>
+    <meta name="description"
+        content="Траттория - это уютный ресторан с аутентичной итальянской кухней. Мы предлагаем широкий выбор блюд, приготовленных из свежих ингредиентов, а также отличное обслуживание.">
+    <meta name="keywords"
+        content="траттория, ресторан, итальянская кухня, блюда, свежие ингредиенты, обслуживание, уютный ресторан">
+    <link rel="shortcut icon" href="assets/image/favicon/favicon.svg" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
+    <link rel="canonical" href="URL" />
+</head>
+
+<body class="text-light">
+    <!-- AUTH start -->
+    <div class="modal fade index-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">ВОЙТИ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
+                    </form>
+                    <p class="mt-3 text-center modal-info">
+                        У вас еще нет аккаунта?
+                        <a href="#" id="switchToRegisterFromLogin" class="text-warning">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AUTH end -->
+
+    <!-- REG start -->
+    <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">РЕГИСТРАЦИЯ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="name"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                имя</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="name" placeholder="Укажите ваше имя"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password-2"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
+                                пароля
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Укажите повторный пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REG end -->
+
+    <!-- header start -->
+    <header class="py-4">
+        <div class="container-xxl d-flex align-items-center justify-content-between">
+            <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <div class="navbar-logo">
+                        <a href="#" class="logo">
+                            <img src="assets/image/logo/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 styled-nav">
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-btn d-flex flex-column gap-3 pt-4">
+                        <a href="tel:+79603111715" class="phone text-white text-decoration-none">+7 (960) 311-17-15</a>
+                        <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-expand-md d-flex align-items-center">
+                <div class="collapse navbar-collapse d-lg-flex gap-3 d-md-flex gap-2" id="navbarNav">
+                    <ul
+                        class="navbar-nav d-flex flex-column flex-lg-row gap-lg-4 flex-md-row gap-md-3 ms-lg-0 ms-md-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="navbar-brand mx-auto my-auto" href="#">
+                <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
+            </a>
+            <div class="d-flex align-items-center gap-lg-5 gap-md-4">
+                <a href="tel:+79603111715" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
+                    (960)
+                    311-17-15</a>
+                <a href="#" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Войти</a>
+                <a href="basket.html" class="icon ms-lg-0">
+                    <img src="assets/image/header/icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- Основной контент -->
+    <div class="one_product container-xxl mt-5" data-aos="fade-up" data-aos-duration="500">
+        <div class="crumbs mb-5">
+            <nav class="custom-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-light text-decoration-none">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="menu.html" class="text-light text-decoration-none">Меню</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Карпаччо</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 dish-block">
+                <div class="row">
+                    <div class="col-md-5 col-sm-12">
+                        <img src="assets/image/dish/image.svg" alt="Карпаччо" class="dish-image img-fluid rounded-0">
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6 col-sm-12 dish-details mt-0">
+                        <h2 class="dish-name m-0 pb-3">Карпаччо</h2>
+                        <div class="dish-block-rating d-flex gap-3 align-items-center">
+                            <div class="dish-ratin">
+                                <img src="assets/image/reviews/magic-star.svg" alt="">
+                                <img src="assets/image/reviews/magic-star.svg" alt="">
+                                <img src="assets/image/reviews/magic-star.svg" alt="">
+                                <img src="assets/image/reviews/magic-star.svg" alt="">
+                                <img src="assets/image/reviews/magic-star.svg" alt="">
+                            </div>
+                            <p class="m-0">(19 отзывов)</p>
+                        </div>
+                        <h3 class="ingredients mt-3">Пищевая ценность</h3>
+                        <div class="nutritional-info d-flex gap-5  pt-2">
+                            <div class="nutritional-value d-flex flex-column">
+                                <span class="nut-num">21</span>
+                                <p class="nat-info">белков</p>
+                            </div>
+                            <div class="nutritional-value d-flex flex-column">
+                                <span class="nut-num">20</span>
+                                <p class="nat-info">жиров</p>
+                            </div>
+                            <div class="nutritional-value d-flex flex-column">
+                                <span class="nut-num">7</span>
+                                <p class="nat-info">углеводов</p>
+                            </div>
+                        </div>
+                        <h3 class="ingredients mt-1">Ингредиенты</h3>
+                        <p class="ing-info pt-2">Тонкие полоски сырой говядины, рукола, пармезан, оливковое масло,
+                            лимонный сок,
+                            бальзамический уксус.</p>
+                        <p class="dish-price">550 ₽ <span> / 200 г</span></p>
+                        <div class="catalog pt-3">
+                            <a href="#" class="catalog-btn mt-5" data-bs-toggle="modal" data-bs-target="#reviewModal">В
+                                корзину</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Отзывы -->
+    <div class="rewards container-xxl my-200" id="rewards" data-aos="fade-up" data-aos-duration="500">
+        <div class="rewards-head">
+            <h2 class="text-center text-md-start">Отзывы</h2>
+        </div>
+        <div class="slider-container mt-2">
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
+
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
+                    </div>
+
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
+
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
+                    </div>
+
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
+
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
+                    </div>
+
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog d-flex align-items-center justify-content-center">
+            <a href="#" class="catalog-btn mt-5" data-bs-toggle="modal" data-bs-target="#reviewDishModal">Оставить
+                отзыв</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-xxl footer my-200" data-aos="fade-up" data-aos-duration="500">
+        <div class="row d-flex align-items-center">
+            <div class="footer-info col-6 mx-0">
+                <h2 class="header-logo my-auto text-decoration-none fs-2 fs-md-6 fs-lg-3">Траттория</h2>
+                <p class="copyright">Copyright © 2025 Мусина Ралина Руслановна</p>
+            </div>
+            <div class="col-6 footer-links d-flex flex-column gap-3">
+                <a href="assets/documents/Политика конфиденциальности.pdf" download>Политика конфиденциальности</a>
+                <div class="links d-flex gap-3 justify-content-end align-items-center">
+                    <a href="assets/documents/Аккредитация.pdf" download>Аккредитация</a>
+                    <div class="vertical-divider"></div>
+                    <a href="assets/documents/Лицензия.pdf" download>Лицензия</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="reviewDishModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content text-light rounded-0">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border">
+                    <div class="modal-header p-0 mt-3 mb-3">
+                        <h5 class="modal-title auth-modal-title ps-3 text-white" id="loginModalLabel">Оставить отзыв о блюде</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-5 pt-0">Оставьте Ваш отзыв и поделитесь впечатлениями о блюде, чтобы мы могли улучшить качество обслуживания!</p>
+                        <form id="reviewForm">
+                            <div class="form-input mb-3 row d-flex align-items-center">
+                                <label for="rating"
+                                    class="name col-sm-3 col-form-label border-right d-flex align-items-center">Блюдо</label>
+                                <div class="custom-select">
+                                    <span class="selected-option">Выберите блюдо</span>
+                                    <ul class="options">
+                                        <li data-value="address1">Карпаччо</li>
+                                        <li data-value="address2">Пепперони Пита</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-input mb-3 row d-flex align-items-center">
+                                <label for="rating"
+                                    class="name col-sm-3 col-form-label border-right d-flex align-items-center">Оценка</label>
+                                <div class="dish-stars d-flex align-items-center">
+                                    <div class="rating-stars d-flex gap-2 col-sm-9">
+                                        <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
+                                            data-index="0">
+                                        <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
+                                            data-index="1">
+                                        <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
+                                            data-index="2">
+                                        <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
+                                            data-index="3">
+                                        <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
+                                            data-index="4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-input mb-3 row d-flex align-items-center">
+                                <label for="name"
+                                    class="name col-sm-3 col-form-label border-right d-flex align-items-center">Ваше
+                                    имя</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" placeholder="Укажите Ваше имя"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-textarea mb-3 row d-flex justify-content-start">
+                                <label for="review"
+                                    class="name col-sm-3 col-form-label border-right border-bottom">Отзыв</label>
+                                <div class="form-textarea-col col-sm-9">
+                                    <textarea class="form-control" id="review" rows="5"
+                                        placeholder="Вы можете добавить отзыв о блюде из ресторана «Траттория»"
+                                        required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-check mb-3 mt-5 d-flex gap-3">
+                                <input class="form-check-input rounded-0" type="checkbox" value="" id="privacyCheckbox"
+                                    required>
+                                <label class="form-check-label" for="privacyCheckbox">
+                                    Я согласен(а) с обработкой персональных данных и <span>политикой
+                                        конфиденциальности</span> *
+                                </label>
+                            </div>
+                            <button type="submit" class="catalog-btn w-100">Оставить отзыв</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- Выпадающее меню в модальном окне -->
+    <script>
+        document.querySelector('.custom-select').addEventListener('click', function () {
+            const options = this.querySelector('.options');
+            options.style.display = options.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.querySelectorAll('.options li').forEach(function (li) {
+            li.addEventListener('click', function () {
+                const selectedOption = document.querySelector('.selected-option');
+                selectedOption.textContent = this.textContent;
+                document.querySelector('#restaurantAddress').value = this.getAttribute('data-value');
+                document.querySelector('.options').style.display = 'none';
+            });
+        });
+    </script>
+
+    <script>
+        // Модальное окно с отзывами
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star-icon');
+            let selectedRating = null;
+
+            if (!stars.length) {
+                console.error('Элементы с классом .star-icon не найдены.');
+                return;
+            }
+
+            stars.forEach((star, index) => {
+                star.addEventListener('mouseover', () => {
+                    stars.forEach((s, i) => {
+                        if (i <= index) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+
+                star.addEventListener('mouseout', () => {
+                    stars.forEach((s, i) => {
+                        if (i < selectedRating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+
+                star.addEventListener('click', () => {
+                    selectedRating = index + 1;
+                    console.log(`Выбранный рейтинг: ${selectedRating}`);
+                    stars.forEach((s, i) => {
+                        if (i < selectedRating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+
+        // Обработчик отправки формы модального окна
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('reviewForm');
+            const modal = document.getElementById('reviewDishModal');
+
+            if (!form || !modal) {
+                console.error('Форма или модальное окно не найдены.');
+                return;
+            }
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                if (!form.checkValidity()) {
+                    alert('Пожалуйста, заполните все обязательные поля.');
+                    return;
+                }
+
+                const name = document.getElementById('name').value;
+                const review = document.getElementById('review').value;
+                const privacyCheckbox = document.getElementById('privacyCheckbox').checked;
+
+                if (!privacyCheckbox) {
+                    alert('Необходимо согласиться с политикой конфиденциальности.');
+                    return;
+                }
+
+                console.log('Имя:', name);
+                console.log('Отзыв:', review);
+
+                const bootstrapModal = bootstrap.Modal.getInstance(modal);
+                bootstrapModal.hide();
+                form.reset();
+            });
+        });
+    </script>
+
+
+<!-- Подключение скрипта AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+                duration: 500,
+                once: true
+            });
+        });
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

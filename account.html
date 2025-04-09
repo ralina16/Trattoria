@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Траттория</title>
+    <meta name="description"
+        content="Траттория - это уютный ресторан с аутентичной итальянской кухней. Мы предлагаем широкий выбор блюд, приготовленных из свежих ингредиентов, а также отличное обслуживание.">
+    <meta name="keywords"
+        content="траттория, ресторан, итальянская кухня, блюда, свежие ингредиенты, обслуживание, уютный ресторан">
+    <link rel="shortcut icon" href="assets/image/favicon/favicon.svg" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
+    <link rel="canonical" href="URL" />
+</head>
+
+<body class="text-light">
+    <!-- AUTH start -->
+    <div class="modal fade index-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">ВОЙТИ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
+                    </form>
+                    <p class="mt-3 text-center modal-info">
+                        У вас еще нет аккаунта?
+                        <a href="#" id="switchToRegisterFromLogin" class="text-warning">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AUTH end -->
+
+    <!-- REG start -->
+    <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">РЕГИСТРАЦИЯ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="name"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                имя</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="name" placeholder="Укажите ваше имя"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password-2"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
+                                пароля
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Укажите повторный пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REG end -->
+
+    <!-- header start -->
+    <header class="py-4">
+        <div class="container-xxl d-flex align-items-center justify-content-between">
+            <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <div class="navbar-logo">
+                        <a href="#" class="logo">
+                            <img src="assets/image/logo/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 styled-nav">
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-btn d-flex flex-column gap-3 pt-4">
+                        <a href="tel:+79603111715" class="phone text-white text-decoration-none">+7 (960) 311-17-15</a>
+                        <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-expand-md d-flex align-items-center">
+                <div class="collapse navbar-collapse d-lg-flex gap-3 d-md-flex gap-2" id="navbarNav">
+                    <ul
+                        class="navbar-nav d-flex flex-column flex-lg-row gap-lg-4 flex-md-row gap-md-3 ms-lg-0 ms-md-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="navbar-brand mx-auto my-auto" href="#">
+                <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
+            </a>
+            <div class="d-flex align-items-center gap-lg-5 gap-md-4">
+                <a href="tel:+79603111715" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
+                    (960)
+                    311-17-15</a>
+                <a href="#" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Войти</a>
+                <a href="basket.html" class="icon ms-lg-0">
+                    <img src="assets/image/header/icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <div class="container-xxl gradient-text text-center position-absolute"><h1>ТРАТТОРИЯ</h1></div>
+
+    <div class="gradient container-xxl mb-5 position-relative" data-aos="fade-up" data-aos-duration="500">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="user-profile d-flex align-items-center gap-2">
+                <a href="#" class="profile-avatar-link">
+                    <img src="assets/image/admin/avatar-mt.png" alt="User Avatar"
+                        class="rounded-circle me-2 profile-avatar">
+                </a>
+                <div>
+                    <h5 class="mb-0">Михаил</h5>
+                    <small>mikhail@mail.com</small>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="text-center mb-5 mt-5 account-title">забронированные столы</h1>
+
+
+        <div class="account-cards row justify-content-center">
+            <div class="col-md-6 col-lg-4 mb-3">
+                <div class="card rounded-0">
+                    <img src="assets/image/account/image.jpg" class="card-img-top rounded-0 img-fluid" alt="Ресторан">
+                    <div class="card-body text-center">
+                        <p class="card-text acc-time">18:00</p>
+                        <p class="card-text acc-date">08.02.2025</p>
+                        <hr class="acc-line">
+                        <p class="card-text acc-address mb-2">г. Казань, Проспект Ямашева 76</p>
+                        <p class="card-text acc-time-res">с 11:00 до 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="catalog-btn">Отменить бронь</button>
+            </div>
+        </div>
+    </div>
+    <!-- Модальное окно для редактирования профиля -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-4">
+                    <div class="modal-header p-0 mb-0">
+                        <h2 class="modal-title text-title mt-3 mx-1" id="editProfileModalLabel">РЕДАКТИРОВАНИЕ ПРОФИЛЯ
+                        </h2>
+                    </div>
+                    <div class="modal-body modal-acc-body">
+                        <form>
+                            <div class="row mb-3">
+                                <div class="profile col-sm-4">
+                                    <div class="profile-picture-container">
+                                        <div class="profile-picture-placeholder rounded-circle"></div>
+                                        <span class="edit-icon d-flex justify-content-end m-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-1.793z" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="form-input mb-3 row d-flex align-items-center">
+                                        <label for="nameInput"
+                                            class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                            имя</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="nameInput" value="Михаил"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-input mb-3 row d-flex align-items-center">
+                                        <label for="emailInput"
+                                            class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                            E-mail</label>
+                                        <div class="col-sm-8">
+                                            <input type="email" class="form-control" id="emailInput"
+                                                value="mikhail@mail.com" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer m-0 p-0">
+                                        <button type="button" class="btn btn-outline-light w-100 m-0"
+                                            data-bs-dismiss="modal">Изменить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для подтверждения отмены брони -->
+    <div class="modal fade modals" id="cancelBookingModal" tabindex="-1" aria-labelledby="cancelModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered dialog">
+            <div class="modal-content text-light">
+                <div class="modal-border">
+                    <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <div class="modal-header">
+                        <h2 class="modal-title booking-title pb-0 mb-0" id="cancelModalLabel">Подтверждение</h2>
+                    </div>
+                    <div class="modal-body m-0 pb-0">
+                        <p>Внимание! Вы собираетесь отменить бронь стола. Пожалуйста, убедитесь, что вы действительно
+                            хотите продолжить, ваша резервировка будет освобождена.</p>
+                        <div class="image-container">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer footer-modals d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-light button-light"
+                            data-bs-dismiss="modal">Подтвердить</button>
+                        <button type="button" class="btn btn-outline-light" id="confirmCancelBtn">Отменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelector('.profile-avatar-link').addEventListener('click', function () {
+            const modal = new bootstrap.Modal(document.getElementById('editProfileModal'));
+            modal.show();
+        });
+
+        document.querySelector('.catalog-btn').addEventListener('click', function () {
+            const modal = new bootstrap.Modal(document.getElementById('cancelBookingModal'));
+            modal.show();
+        });
+    </script>
+
+    <!-- Подключение JavaScript AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+            duration: 500,
+            once: true
+        });
+    });
+</script>
+
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

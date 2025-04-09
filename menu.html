@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Траттория</title>
+    <meta name="description"
+        content="Траттория - это уютный ресторан с аутентичной итальянской кухней. Мы предлагаем широкий выбор блюд, приготовленных из свежих ингредиентов, а также отличное обслуживание.">
+    <meta name="keywords"
+        content="траттория, ресторан, итальянская кухня, блюда, свежие ингредиенты, обслуживание, уютный ресторан">
+    <link rel="shortcut icon" href="assets/image/favicon/favicon.svg" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
+    <link rel="canonical" href="URL" />
+</head>
+
+<body class="text-light">
+    <!-- AUTH start -->
+    <div class="modal fade index-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">ВОЙТИ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
+                    </form>
+                    <p class="mt-3 text-center modal-info">
+                        У вас еще нет аккаунта?
+                        <a href="#" id="switchToRegisterFromLogin" class="text-warning">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AUTH end -->
+
+    <!-- REG start -->
+    <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">РЕГИСТРАЦИЯ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="name"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                имя</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="name" placeholder="Укажите ваше имя"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="email"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="password-2"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
+                                пароля
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Укажите повторный пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REG end -->
+
+    <!-- header start -->
+    <header class="py-4">
+        <div class="container-xxl d-flex align-items-center justify-content-between">
+            <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <div class="navbar-logo">
+                        <a href="#" class="logo">
+                            <img src="assets/image/logo/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 styled-nav">
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-btn d-flex flex-column gap-3 pt-4">
+                        <a href="tel:+79603111715" class="phone text-white text-decoration-none">+7 (960) 311-17-15</a>
+                        <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-expand-md d-flex align-items-center">
+                <div class="collapse navbar-collapse d-lg-flex gap-3 d-md-flex gap-2" id="navbarNav">
+                    <ul
+                        class="navbar-nav d-flex flex-column flex-lg-row gap-lg-4 flex-md-row gap-md-3 ms-lg-0 ms-md-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <a class="navbar-brand mx-auto my-auto" href="#">
+                <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
+            </a>
+            <div class="d-flex align-items-center gap-lg-5 gap-md-4">
+                <a href="tel:+79603111715" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
+                    (960)
+                    311-17-15</a>
+                <a href="#" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">Войти</a>
+                <a href="basket.html" class="icon ms-lg-0">
+                    <img src="assets/image/header/icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- menu start -->
+    <div class="menu container-xxl">
+        <div class="crumbs">
+            <nav class="custom-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-light text-decoration-none">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Меню</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="menu-info d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            <h2 class="pt-5 w-100 text-sm-start">меню</h2>
+            <div class="search-box">
+                <img src="assets/image/menu/search.svg" alt="">
+                <input type="text" class="form-control" placeholder="Поиск...">
+              </div>
+        </div>
+        <div class="d-sm-none text-center">
+            <div class="dropdown">
+                <button class="btn-filter-dark" id="dropdownButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-filter" viewBox="0 0 16 16">
+                        <path
+                            d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                    Фильтр
+                </button>
+                <ul class="dropdown-menu-dark" id="dropdownMenu">
+                    <li><button class="dropdown-item-dark" type="button">Все</button></li>
+                    <li><button class="dropdown-item-dark" type="button">Тандырное ассорти</button></li>
+                    <li><button class="dropdown-item-dark" type="button">Шаурма</button></li>
+                    <li><button class="dropdown-item-dark" type="button">Пицца</button></li>
+                    <li><button class="dropdown-item-dark" type="button">Салаты и закуски</button></li>
+                    <li><button class="dropdown-item-dark" type="button" id="alcoholButton">Алкогольные напитки</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-desktop d-none d-sm-block mb-3">
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" autofocus>Все</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Тандырное ассорти</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Шаурма</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Пицца</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Салаты и закуски</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 mt-3" data-bs-toggle="modal"
+                data-bs-target="#ageModalDish">Алкогольные напитки</button>
+        </div>
+        <div class="cat-cards row d-flex justify-content-between" id="card-container">
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-sm-start text-md-center">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-sm-start text-md-center">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-sm-start text-md-center">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+                <div class="card bg-secondary text-white border-0 h-100">
+                    <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
+                    <div class="card-body px-3 py-3 d-flex flex-column">
+                        <div class="c-title d-flex justify-content-between">
+                            <h5 class="card-title text-sm-start text-md-center my-auto">Карпаччо</h5>
+                            <p class="small my-auto">200 г</p>
+                        </div>
+                        <p class="card-text text-sm-start">
+                            Тонкие ломтики сырой говядины, руккола, парамезан, оливковое масло,
+                            лимонный сок, бальзамический уксус.
+                        </p>
+                        <div class="card-info d-flex justify-content-between align-items-center">
+                            <p class="card-price my-auto text-start">550 ₽</p>
+                            <button class="btn btn-outline-light my-auto">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination d-flex justify-content-center" id="pagination"></div>
+    </div>
+    <!-- menu end -->
+
+
+    <!-- footer start -->
+    <div class="container-xxl footer my-200" data-aos="fade-up" data-aos-duration="500">
+        <div class="row d-flex align-items-center">
+            <div class="footer-info col-6 mx-0">
+                <h2 class="header-logo my-auto text-decoration-none fs-2 fs-md-6 fs-lg-3">Траттория</h2>
+                <p class="copyright">Copyright © 2025 Мусина Ралина Руслановна</p>
+            </div>
+            <div class="col-6 footer-links d-flex flex-column gap-3">
+                <a href="assets/documents/Политика конфиденциальности.pdf" download>Политика конфиденциальности</a>
+                <div class="links d-flex gap-3 justify-content-end align-items-center">
+                    <a href="assets/documents/Аккредитация.pdf" download>Аккредитация</a>
+                    <div class="vertical-divider"></div>
+                    <a href="assets/documents/Лицензия.pdf" download>Лицензия</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+
+    <!-- Модальное окно 18 лет -->
+    <div class="modal fade" id="ageModalDish" tabindex="-1" aria-labelledby="ageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered dialog">
+            <div class="modal-content text-light">
+                <div class="modal-border">
+                    <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                    <div class="modal-header">
+                        <h2 class="modal-title booking-title pb-0 mb-0" id="ageModalLabel">вам есть 18 лет?</h2>
+                    </div>
+                    <div class="modal-body m-0 pb-0">
+                        <p>Некоторые товары, такие как алкогольные напитки, могут быть представлены только для лиц,
+                            достигших совершеннолетнего возраста.</p>
+                        <div class="image-container">
+                            <div class="image-age"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer footer-modals d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-light button-light" data-bs-dismiss="modal">Да, мне
+                            есть 18 лет</button>
+                        <button type="button" class="btn btn-outline-light" id="confirmCancelBtn">Нет, я младше</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скрипта AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+                duration: 500,
+                once: true
+            });
+        });
+    </script>
+
+    <script>
+        const cardContainer = document.querySelector('.cat-cards');
+        const cards = Array.from(cardContainer.querySelectorAll('.card'));
+
+        // Количество карточек на странице
+        const cardsPerPage = 8;
+
+        // Функция для отрисовки карточек
+        function renderCards(pageNumber) {
+            const start = (pageNumber - 1) * cardsPerPage;
+            const end = start + cardsPerPage;
+
+            // Скрываем все карточки
+            cards.forEach((card) => {
+                card.style.display = 'none';
+            });
+
+            // Отображаем только нужные карточки
+            for (let i = start; i < end && i < cards.length; i++) {
+                cards[i].style.display = 'block';
+            }
+        }
+
+        // Функция для создания пагинации
+        function createPagination(totalPages, currentPage) {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            // Кнопка "Назад"
+            const prevButton = document.createElement('button');
+            prevButton.textContent = '<';
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                if (!prevButton.disabled) {
+                    renderCards(currentPage - 1);
+                    createPagination(totalPages, currentPage - 1);
+                }
+            });
+            pagination.appendChild(prevButton);
+
+            // Номера страниц
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.toggle('active', i === currentPage);
+                pageButton.addEventListener('click', () => {
+                    renderCards(i);
+                    createPagination(totalPages, i);
+                });
+                pagination.appendChild(pageButton);
+            }
+
+            // Кнопка "Вперед"
+            const nextButton = document.createElement('button');
+            nextButton.textContent = '>';
+            nextButton.disabled = currentPage === totalPages;
+            nextButton.addEventListener('click', () => {
+                if (!nextButton.disabled) {
+                    renderCards(currentPage + 1);
+                    createPagination(totalPages, currentPage + 1);
+                }
+            });
+            pagination.appendChild(nextButton);
+        }
+
+        // Инициализация
+        const totalPages = Math.ceil(cards.length / cardsPerPage);
+        let currentPage = 1;
+
+        renderCards(currentPage);
+        createPagination(totalPages, currentPage);
+    </script>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/main.js" defer></script>
+
+
+</body>
+
+</html>
