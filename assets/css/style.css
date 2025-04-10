@@ -164,14 +164,14 @@ input:-internal-autofill-selected {
     color: #fff;
 }
 
-.navbar .nav-link {
+.navbar-page .nav-link {
     font-size: 16px;
     font-weight: 400;
     font-family: 'Manrope', sans-serif;
     letter-spacing: 0.03em;
 }
 
-.navbar .nav-link {
+.navbar-page .nav-link {
     text-decoration: none;
     position: relative;
     display: inline-block;
@@ -179,7 +179,7 @@ input:-internal-autofill-selected {
     transition: color 0.3s ease;
 }
 
-.navbar .nav-link::after {
+.navbar-page .nav-link::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -190,7 +190,7 @@ input:-internal-autofill-selected {
     transition: width 0.3s ease, left 0.3s ease;
 }
 
-.navbar .nav-link:hover::after {
+.navbar-page .nav-link:hover::after {
     width: 100%;
     left: 0;
 }
@@ -1710,14 +1710,14 @@ h2 {
 /* reviews end */
 
 /* contacts start */
-.contacts h2 {
-    font-size: 3em;
-    padding-bottom: 0;
-    margin: 0;
-}
-
 .contacts h3 {
     font-weight: 600;
+}
+
+.line {
+    height: 1px;
+    max-width: 1400px;
+    background-color: rgba(217, 217, 217, 0.145)
 }
 
 .contacts-block {
@@ -1733,18 +1733,12 @@ h2 {
     gap: 6px;
 }
 
-.img-add {
-    width: 28px;
+.contacts h2 {
+    padding-bottom: 0;
 }
 
 .contact-info p {
     margin-bottom: 0;
-}
-
-.line {
-    height: 1px;
-    max-width: 1400px;
-    background-color: rgba(217, 217, 217, 0.145)
 }
 
 .con-title {
@@ -1756,14 +1750,13 @@ h2 {
     justify-content: end;
 }
 
-#map {
-    width: 100%;
-    height: 400px;
-}
-
 .contacts-ellipse {
     width: 11px;
     height: 11px;
+}
+
+.contacts-inform {
+    flex-wrap: nowrap;
 }
 
 @media (max-width: 1200px) {
@@ -1803,20 +1796,20 @@ h2 {
     }
 
     .contacts h3 {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 
     .contacts-block {
-        font-size: 0.9em;
+        font-size: 0.65em;
     }
 
     .con-title {
         display: flex;
-        justify-content: start;
+        justify-content: end;
     }
 
     .contact-icon {
-        justify-content: start;
+        justify-content: end;
     }
 
     .social-media {
@@ -1831,13 +1824,73 @@ h2 {
         height: 240px;
     }
 
-    /* .con-title {
-        justify-content: center !important;
+    .contacts-ellipse {
+        width: 8px;
+        height: 8px;
+    }
+
+    .contact-icon img {
+        width: 30px;
+    }
+
+    .phone-img {
+        width: 15px;
+    }
+}
+
+@media (max-width: 704px) {
+    .contacts-block {
+        font-size: 0.6em;
+    }
+
+    .contacts h3 {
+        font-size: 0.85em;
+    }
+
+    .contact-icon img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 590px) {
+    .contacts-inform {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .contacts-inform {
+        width: 100% !important;
+    }
+
+    .contact-info {
+        width: 100% !important;
+    }
+
+    .col-3 {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+
+    .con-title {
+        display: flex;
+        justify-content: start;
     }
 
     .contact-icon {
-        justify-content: center !important;
-    } */
+        justify-content: start;
+    }
+
+    .contacts-block {
+        font-size: 0.8em;
+    }
+
+    .contacts h3 {
+        font-size: 1em;
+    }
+
+    .contact-icon img {
+        width: 35px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2033,33 +2086,6 @@ h2 {
     cursor: not-allowed;
 }
 
-.admin-form-control {
-    background: transparent !important;
-    border: 1px solid #9d9d9d47;
-    color: #fff;
-    padding: 5px;
-    border-radius: 0;
-    padding-left: 40px;
-    padding-right: 10px;
-    border: 1px solid #363636;
-    border-radius: 4px;
-    font-size: 14px;
-    outline: none;
-}
-
-.admin-form-control::placeholder {
-    color: #9d9d9d47;
-}
-
-.admin-form-control:hover {
-    border-color: #d9d9d991;
-}
-
-.admin-form-control:focus {
-    border-color: #d9d9d9;
-    box-shadow: none;
-}
-
 .search-box {
     position: relative;
     width: 100%;
@@ -2070,16 +2096,13 @@ h2 {
 .search-box input {
     width: 100%;
     padding: 10px 10px 10px 45px;
-    /* Добавляем отступ слева под иконку */
     font-size: 16px;
     border: none;
     border-bottom: 1px solid #636363;
-    /* Только нижняя граница */
     outline: none;
     background: transparent;
     transition: border-color 0.3s ease;
     color: rgb(159, 159, 159);
-    /* Цвет текста в поле ввода */
 }
 
 .search-box input::placeholder {
@@ -2092,12 +2115,10 @@ h2 {
 
 .search-box input:focus {
     border-bottom-color: #face8bb6;
-    /* Цвет границы при фокусе */
 }
 
 .search-box input:hover {
     border-bottom-color: #ffebcdb6;
-    /* Цвет границы при фокусе */
 }
 
 .search-box img {
@@ -3896,7 +3917,7 @@ table .btn-outline-light {
         right: 10px;
         background-color: #171717;
         border: none;
-        padding: 5px;
+        padding: 7px;
         display: flex;
         align-items: center;
         justify-content: center;
