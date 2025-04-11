@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: .5s;
+    transition: all 0.5s ease;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -137,11 +137,6 @@ body {
 a.text-warning {
     color: #ffffffce !important;
     font-family: 'Manrope', sans-serif !important;
-}
-
-.modal-backdrop.show {
-    opacity: 0.5;
-    background-color: #000;
 }
 
 .form-input {
@@ -827,7 +822,7 @@ h2 {
     object-fit: cover;
 }
 
-.btn-outline-light {
+.catalog .btn-outline-light {
     font-weight: 500;
     color: #fff;
     letter-spacing: 0.02em;
@@ -836,7 +831,7 @@ h2 {
     font-family: 'Manrope', sans-serif;
 }
 
-.btn-outline-light:hover {
+.catalog .btn-outline-light:hover {
     color: #161616;
     background-color: #ffffffeb;
     border: 1px solid rgba(217, 217, 217, 0.768)eb;
@@ -2297,7 +2292,7 @@ li.breadcrumb-item {
 }
 
 .world-map {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -2383,10 +2378,6 @@ li.breadcrumb-item {
         font-size: 1.1em;
     }
 
-    .world-map {
-        margin-top: 80px;
-    }
-
     .faq-question {
         font-size: 18px;
     }
@@ -2439,7 +2430,7 @@ li.breadcrumb-item {
 
     .about-img-block,
     .world-map {
-        max-width: 100%;
+        max-width: 70%;
         height: auto;
     }
 
@@ -2497,7 +2488,7 @@ li.breadcrumb-item {
 
     .about-img-block,
     .world-map {
-        width: 100%;
+        max-width: 90%;
         height: auto;
     }
 
@@ -2535,7 +2526,7 @@ li.breadcrumb-item {
 
     .about-img-block,
     .world-map {
-        width: 100%;
+        max-width: 100% !important;
         height: auto;
     }
 
@@ -2726,7 +2717,7 @@ li.breadcrumb-item {
 
 .star-icon:hover,
 .star-icon.active {
-    filter: hue-rotate(50deg) saturate(2) brightness(1.5);
+    filter: brightness(0.9) contrast(0.5) sepia(0.8) saturate(1.2);
 }
 
 .form-input {
@@ -2958,6 +2949,10 @@ textarea.form-control {
     background-color: #ddd;
 }
 
+.dish-details {
+    margin: 0 0 0 60px !important;
+}
+
 @media (max-width: 1400px) {
     .dish-image {
         height: 410px;
@@ -3024,6 +3019,10 @@ textarea.form-control {
     .dish-price span {
         font-size: 12px;
     }
+
+    .dish-details {
+        margin: 0 0 0 30px !important;
+    }
 }
 
 @media (max-width: 980px) {
@@ -3072,7 +3071,7 @@ textarea.form-control {
     }
 
     .ingredients {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .nutritional-info {
@@ -3088,15 +3087,19 @@ textarea.form-control {
     }
 
     .ing-info {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .dish-price {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .dish-price span {
-        font-size: 11px;
+        font-size: 13px;
+    }
+
+    .dish-details {
+        margin: 0 !important;
     }
 
     .modal-dialog {
@@ -3104,7 +3107,7 @@ textarea.form-control {
     }
 
     .modal-title {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .modal-body p {
@@ -3672,13 +3675,13 @@ table .btn-outline-light {
     align-items: center;
 }
 
-.controls .btn-outline-light {
+.table .btn-outline-light {
     background-color: transparent;
     color: #584E3D;
     border-color: #584E3D;
 }
 
-.controls .btn-outline-light:hover {
+.table .btn-outline-light:hover {
     background-color: transparent !important;
     color: #584E3D;
     border-color: #584E3D;
@@ -4051,6 +4054,7 @@ table .btn-outline-light {
     transition: border-color 0.3s ease;
     overflow: hidden;
     max-width: 530px;
+    cursor: pointer;
 }
 
 .restaurant-card:hover {
@@ -4097,6 +4101,11 @@ table .btn-outline-light {
 .restaurant-cards {
     justify-content: space-between;
 }
+
+.r-img {
+    height: 80px;
+}
+
 
 @media (max-width: 1065px) {
     .restaurant-card-title {
@@ -4231,6 +4240,16 @@ table .btn-outline-light {
 
 
 /* table start */
+
+
+.img-fluid.table-img {
+    transition: filter 0.3s ease; 
+}
+
+.img-fluid.table-img:hover {
+    /* filter: brightness(0.7) contrast(0.9) sepia(0) saturate(0); */
+    filter: brightness(0.7) contrast(0.2) sepia(0.8) saturate(1.2);
+}
 .t-blocks {
     border: 1px solid #584E3D;
     padding: 27px;
@@ -4474,6 +4493,14 @@ table .btn-outline-light {
         margin-left: 0px;
     }
 
+    .t-icon {
+        gap: 120px !important;
+    }
+
+    .t-icon-2 {
+        gap: 90px !important;
+    }
+
     .info-panel {
         display: flex;
         flex-wrap: wrap;
@@ -4521,13 +4548,7 @@ table .btn-outline-light {
 }
 
 @media (max-width: 690px) {
-    .t-icon {
-        gap: 40px !important;
-    }
 
-    .t-icon-2 {
-        gap: 70px !important;
-    }
 
     .info-panel h5 {
         font-size: 18px;
@@ -4539,23 +4560,27 @@ table .btn-outline-light {
 }
 
 @media (max-width: 630px) {
+    .t-icon {
+        gap: 60px !important;
+    }
     .t-icon-2 {
-        gap: 50px !important;
+        gap: 60px !important;
     }
 }
 
 @media (max-width: 550px) {
-    .t-icon-2 {
-        gap: 30px !important;
-    }
-
     .p-info-card {
         width: 48%;
     }
 }
 
 @media (max-width: 480px) {
-
+    .t-icon {
+        gap: 50px !important;
+    }
+    .t-icon-2 {
+        gap: 40px !important;
+    }
 
     .legend p {
         font-size: 9px;
@@ -4575,11 +4600,11 @@ table .btn-outline-light {
     }
 
     .info-panel h5 {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     .info-panel p {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -4715,6 +4740,10 @@ table .btn-outline-light {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.order-cart-item .quantity-controls button {
+    background-color: transparent !important;
 }
 
 .remove-btn {

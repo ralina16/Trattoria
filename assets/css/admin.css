@@ -240,12 +240,18 @@ button,
 
 @media (max-width: 670px) {
     .card-text {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 
     .btn-primary {
         padding: 5px 15px;
         font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-text {
+        font-size: 11px !important;
     }
 }
 
