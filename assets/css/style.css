@@ -119,6 +119,7 @@ body {
 }
 
 .auth-modal-title {
+    text-transform: uppercase;
     font-size: 35px;
     color: #F8D49E;
 }
@@ -2884,7 +2885,7 @@ textarea.form-control {
 .custom-select {
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 80%;
 }
 
 .selected-option {
@@ -2895,7 +2896,7 @@ textarea.form-control {
 .options {
     display: none;
     position: absolute;
-    top: 120%;
+    top: 100%;
     left: 19px;
     right: 0;
     background-color: #161616;
@@ -2909,6 +2910,7 @@ textarea.form-control {
 }
 
 .options li {
+    font-size: 14px;
     padding: 10px;
     cursor: pointer;
 }
@@ -3279,12 +3281,10 @@ textarea.form-control {
         height: 10px;
     }
 
-    @media (max-width: 474px) {
         .form-textarea .form-control {
             flex-wrap: wrap;
             max-width: 160px;
         }
-    }
 
     .form-input ::placeholder,
     .form-textarea ::placeholder {
@@ -3325,6 +3325,16 @@ textarea.form-control {
     .form-textarea .name {
         max-width: 80px;
     }
+
+    .dropdown-arrow img {
+        width: 9px;
+    }
+}
+
+@media (max-width: 397px) {
+.custom-select .col-10 {
+    width: 77% !important;
+}
 }
 
 @media (max-width: 380px) {
@@ -3364,6 +3374,10 @@ textarea.form-control {
     .form-textarea .form-control {
         max-width: 180px;
     }
+
+        .custom-select .col-10 {
+            width: 67% !important;
+        }
 }
 
 
@@ -4964,7 +4978,7 @@ table .btn-outline-light {
 
     .form-input .name,
     .form-textarea .name {
-        max-width: 160px;
+        max-width: 100px;
     }
 
     .order-block {
