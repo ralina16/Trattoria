@@ -4243,13 +4243,14 @@ table .btn-outline-light {
 
 
 .img-fluid.table-img {
-    transition: filter 0.3s ease; 
+    transition: filter 0.3s ease;
 }
 
 .img-fluid.table-img:hover {
     /* filter: brightness(0.7) contrast(0.9) sepia(0) saturate(0); */
     filter: brightness(0.7) contrast(0.2) sepia(0.8) saturate(1.2);
 }
+
 .t-blocks {
     border: 1px solid #584E3D;
     padding: 27px;
@@ -4563,6 +4564,7 @@ table .btn-outline-light {
     .t-icon {
         gap: 60px !important;
     }
+
     .t-icon-2 {
         gap: 60px !important;
     }
@@ -4578,6 +4580,7 @@ table .btn-outline-light {
     .t-icon {
         gap: 50px !important;
     }
+
     .t-icon-2 {
         gap: 40px !important;
     }

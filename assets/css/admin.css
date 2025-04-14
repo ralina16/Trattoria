@@ -95,6 +95,10 @@ body {
     padding-top: 20px;
 }
 
+.admin-icon {
+    width: 22px;
+}
+
 h1,
 h2,
 h3,
@@ -260,6 +264,18 @@ button,
 .admin-dish {
     width: 50px !important;
     height: 50px !important;
+}
+
+.admin-form-control {
+    transition: none; 
+}
+
+.admin-form-control:hover,
+.admin-form-control:focus {
+    border-color: #ced4da; 
+    box-shadow: none;
+    background-color: transparent; 
+    outline: none; 
 }
 
 @media (max-width: 993px) {
