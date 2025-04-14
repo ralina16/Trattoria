@@ -11,6 +11,7 @@ body {
     background-color: #161616;
 }
 
+
 /* подключение шрифтов */
 @font-face {
     font-family: 'Catallina';
@@ -1623,6 +1624,10 @@ h2 {
 
 .stars-head {
     width: 700px;
+}
+
+.dropdown-arrow {
+    cursor: pointer;
 }
 
 @media (max-width: 1300px) {
