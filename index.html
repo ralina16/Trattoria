@@ -227,28 +227,33 @@
                     Фильтр
                 </button>
                 <ul class="dropdown-menu-dark" id="dropdownMenu">
-                    <li><button class="dropdown-item-dark" type="button">Все</button></li>
-                    <li><button class="dropdown-item-dark" type="button">Тандырное ассорти</button></li>
-                    <li><button class="dropdown-item-dark" type="button">Шаурма</button></li>
-                    <li><button class="dropdown-item-dark" type="button">Пицца</button></li>
-                    <li><button class="dropdown-item-dark" type="button">Салаты и закуски</button></li>
+                    <li><button class="dropdown-item-dark" type="button" data-category="all">Все</button></li>
+                    <li><button class="dropdown-item-dark" type="button" data-category="tandyr">Тандырное
+                            ассорти</button></li>
+                    <li><button class="dropdown-item-dark" type="button" data-category="shaurma">Шаурма</button></li>
+                    <li><button class="dropdown-item-dark" type="button" data-category="pizza">Пицца</button></li>
+                    <li><button class="dropdown-item-dark" type="button" data-category="salads">Салаты и
+                            закуски</button></li>
                     <li><button class="dropdown-item-dark" type="button" data-bs-toggle="modal"
-                            data-bs-target="#ageModal">Алкогольные напитки</button>
-                    </li>
+                            data-bs-target="#ageModal" data-category="alcohol">Алкогольные напитки</button></li>
                 </ul>
             </div>
         </div>
+
         <div class="filter-desktop d-none d-sm-block mb-3">
-            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" autofocus>Все</button>
-            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Тандырное ассорти</button>
-            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Шаурма</button>
-            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Пицца</button>
-            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3">Салаты и закуски</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" autofocus
+                data-category="all">Все</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" data-category="tandyr">Тандырное
+                ассорти</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" data-category="shaurma">Шаурма</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" data-category="pizza">Пицца</button>
+            <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 me-3" data-category="salads">Салаты и
+                закуски</button>
             <button type="button" class="btn-filter px-lg-4 px-md-3 px-3 mt-3" data-bs-toggle="modal"
-                data-bs-target="#ageModal">Алкогольные напитки</button>
+                data-bs-target="#ageModal" data-category="alcohol">Алкогольные напитки</button>
         </div>
         <div class="cat-cards row d-flex justify-content-between">
-            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4" data-category="salads">
                 <a href="dish.html" class="card-link text-decoration-none">
                     <div class="card bg-secondary text-white border-0 h-100">
                         <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
@@ -269,7 +274,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4" data-category="pizza">
                 <a href="dish.html" class="card-link text-decoration-none">
                     <div class="card bg-secondary text-white border-0 h-100">
                         <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
@@ -290,7 +295,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4" data-category="tandyr">
                 <a href="dish.html" class="card-link text-decoration-none">
                     <div class="card bg-secondary text-white border-0 h-100">
                         <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
@@ -311,7 +316,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4">
+
+            <div class="col-12 col-sm-4 col-md-3 gx-0 gy-4" data-category="alcohol">
                 <a href="dish.html" class="card-link text-decoration-none">
                     <div class="card bg-secondary text-white border-0 h-100">
                         <img src="assets/image/catalog/img-1.jpg" class="card-img rounded-0 img-fluid" alt="Карпаччо">
@@ -500,7 +506,7 @@
                                 </div>
                             </div>
                             <div class="date m-0">
-                                <p class="m-0 p-0 text-muted">06.04.25</p>
+                                <p class="m-0 p-0">06.04.25</p>
                             </div>
                         </div>
                     </div>
@@ -797,7 +803,8 @@
                                     <div
                                         class="selected-option-container col-10 col-md-11 d-flex align-items-center justify-content-between">
                                         <span class="selected-option">Выберите адрес</span>
-                                        <span class="dropdown-arrow"><img src="assets/image/reviews/vector.svg" alt="" class="me-1"></span>
+                                        <span class="dropdown-arrow"><img src="assets/image/reviews/vector.svg" alt=""
+                                                class="me-1"></span>
                                     </div>
                                     <ul class="options">
                                         <li data-value="address1">ул. Проспект Ямашева, д. 76</li>
