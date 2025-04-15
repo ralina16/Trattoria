@@ -667,11 +667,6 @@ h1 {
 /* banner end */
 
 /* catalog start */
-.card {
-    margin-bottom: 1rem;
-    margin: 0 auto;
-}
-
 .btn-filter {
     font-size: 16px;
     color: #fff;
@@ -1662,6 +1657,16 @@ h2 {
     .form-select {
         max-width: 50% !important;
     }
+
+    .card-head h5 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+.date p {
+    font-size: 10px;
+}
 }
 
 @media (max-width: 426px) {
@@ -1686,6 +1691,10 @@ h2 {
 
     .rev-text {
         font-size: 13px;
+    }
+    
+    .date p {
+        font-size: 9px;
     }
 }
 
@@ -5354,6 +5363,10 @@ table .btn-outline-light {
 .gradient-text h1 {
     font-size: 128px;
     font-family: 'DelaGothicOne', sans-serif;
+}
+
+.footer-modals .btn-outline-light {
+    font-family: 'Manrope',sans-serif;
 }
 
 @media (max-width: 1200px) {
