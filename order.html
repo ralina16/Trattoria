@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,10 +15,108 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 </head>
-
 <body class="text-light">
-       <!-- header start -->
-       <header class="py-4">
+
+    <!-- AUTH start -->
+    <div class="modal fade index-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">ВОЙТИ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="loginEmail"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="loginEmail"
+                                    placeholder="Укажите вашу почту" required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="loginPassword"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="loginPassword"
+                                    placeholder="Укажите пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
+                    </form>
+                    <p class="mt-3 text-center modal-info">
+                        У вас еще нет аккаунта?
+                        <a href="#" id="switchToRegisterFromLogin" class="text-warning">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AUTH end -->
+
+    <!-- REG start -->
+    <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="regModalLabel">РЕГИСТРАЦИЯ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regName"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                имя</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="regName" placeholder="Укажите ваше имя"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regEmail"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="regEmail" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regPassword"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="regPassword"
+                                    placeholder="Укажите пароль" required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regPasswordConfirm"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
+                                пароля
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="regPasswordConfirm"
+                                    placeholder="Укажите повторный пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REG end -->
+
+    <!-- header start -->
+    <header class="py-4">
         <div class="container-xxl d-flex align-items-center justify-content-between" data-aos="fade-up"
             data-aos-duration="500">
             <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas"
@@ -140,7 +237,6 @@
                     <div class="order-line"></div>
                 </div>
                 <form>
-
                     <div class="form-input mb-3 row mx-0 align-items-center">
                         <label for="name"
                             class="name col-6 col-md-5 col-lg-4 col-form-label border-right d-flex align-items-center py-2">
@@ -150,7 +246,6 @@
                             <input type="text" class="form-control" id="name" placeholder="Укажите имя" required>
                         </div>
                     </div>
-
                     <div class="form-input mb-3 row mx-0">
                         <label for="surname"
                             class="name col-6 col-md-5 col-lg-4 col-form-label border-right d-flex align-items-center py-2">Ваша
@@ -176,7 +271,6 @@
                         </div>
                     </div>
                 </form>
-
                 <div class="order-title mb-4 mt-5">
                     <h3 class="mb-3">Способ оплаты</h3>
                     <div class="order-line"></div>
@@ -202,14 +296,12 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-6 order-col px-0">
                 <div class="order-block-item-2 d-flex flex-column h-75">
                     <div class="order-title mb-4">
                         <h3 class="mb-3">Ваш заказ</h3>
                         <div class="order-line"></div>
                     </div>
-
                     <div class="order-cart-items">
                         <div class="order-cart-item mb-4">
                             <div class="item-infoblock d-flex gap-2">
@@ -233,22 +325,19 @@
                         </div>
                         <div class="order-line"></div>
                     </div>
-
                     <div class="cart-total d-flex justify-content-between mt-auto align-items-end">
                         <p class="total-info m-0 p-0">К оплате</p>
                         <span class="total-price">2 700 ₽</span>
                     </div>
                 </div>
-
                 <div class="form-input mt-4 mb-3 row mx-0 form-gold">
-                    <label for="surname"
+                    <label for="promoCode"
                         class="name col-6 col-md-5 col-lg-4 col-form-label border-right d-flex align-items-center py-2">Промокод</label>
                     <div class="col-6 col-md-7 col-lg-8">
-                        <input type="text" class="form-control" id="surname" placeholder="Введите промокод на скидку"
+                        <input type="text" class="form-control" id="promoCode" placeholder="Введите промокод на скидку"
                             required>
                     </div>
                 </div>
-
                 <div class="item-muted-block d-flex gap-3 align-items-center justify-content-between mt-5 mx-0">
                     <div class="text-muted">Нажимая кнопку вы соглашаетесь с <a href="">правилами сообщества</a>
                     </div>
@@ -267,7 +356,7 @@
                 <p class="copyright">Copyright © 2025 Мусина Ралина Руслановна</p>
             </div>
             <div class="col-6 footer-links d-flex flex-column gap-3">
-                <a href="assets/documents/Политика конфиденциальности.pdf" download>Политика конфиденциальности</a>
+                <a href="assets/documents/Политика-конфиденциальности.pdf" download>Политика конфиденциальности</a>
                 <div class="links d-flex gap-3 justify-content-end align-items-center">
                     <a href="assets/documents/Аккредитация.pdf" download>Аккредитация</a>
                     <div class="vertical-divider"></div>
@@ -283,11 +372,8 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="order-modal-body">
-                    <!-- Иконка галочки -->
-                    <div class="fas fa-check-circle checkmark"><img src="assets/image/order/checkmark.svg" alt=""></div>
-                    <!-- Заголовок -->
-                    <h1 class="order-modal-title display-4 mt-4 mb-3">СПАСИБО!</h1>
-                    <!-- Текст сообщения -->
+                    <div><img src="assets/image/order/checkmark.svg" alt=""></div>
+                    <h1 class="order-modal-title display-4 mt-4 mb-3" id="successModalLabel">СПАСИБО!</h1>
                     <p class="modal-text lead">
                         Ваше бронирование передано администратору.<br>
                         Ждём Вас в нашем ресторане.
@@ -297,15 +383,10 @@
         </div>
     </div>
 
-
-
     <!-- JAVASCRIPT -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-
-        <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

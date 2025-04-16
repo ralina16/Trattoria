@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,22 +15,118 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 </head>
-
 <body class="text-light">
+
+    <!-- AUTH start -->
+    <div class="modal fade index-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">ВОЙТИ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="loginEmail"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="loginEmail"
+                                    placeholder="Укажите вашу почту" required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="loginPassword"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="loginPassword"
+                                    placeholder="Укажите пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
+                    </form>
+                    <p class="mt-3 text-center modal-info">
+                        У вас еще нет аккаунта?
+                        <a href="#" id="switchToRegisterFromLogin" class="text-warning">Зарегистрироваться</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AUTH end -->
+
+    <!-- REG start -->
+    <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light custom-modal">
+                <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="regModalLabel">РЕГИСТРАЦИЯ</h5>
+                    </div>
+                    <form class="modal-form">
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regName"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
+                                имя</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="regName" placeholder="Укажите ваше имя"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regEmail"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
+                                email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="regEmail" placeholder="Укажите вашу почту"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regPassword"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
+                                *</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="regPassword"
+                                    placeholder="Укажите пароль" required>
+                            </div>
+                        </div>
+                        <div class="form-input mb-3 row d-flex align-items-center form-index">
+                            <label for="regPasswordConfirm"
+                                class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
+                                пароля
+                                *</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="regPasswordConfirm"
+                                    placeholder="Укажите повторный пароль" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="catalog-btn w-100 mt-3">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- REG end -->
+
     <!-- header start -->
     <header class="py-4">
-        <div class="container-xxl d-flex align-items-center justify-content-between" data-aos="fade-up"
-            data-aos-duration="500">
+        <div class="container-xxl d-flex align-items-center justify-content-between">
             <button class="navbar-toggler d-lg-none d-md-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
-                aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2">
                 <div class="offcanvas-header">
                     <div class="navbar-logo">
                         <a href="#" class="logo">
-                            <img src="assets/image/logo/logo.svg" alt="">
+                            <img src="assets/image/logo/logo.svg" alt="Логотип Траттория">
                         </a>
                     </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -39,14 +134,17 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 styled-nav">
-                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#">Главная</a></li>
-                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#">Меню</a></li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#">Контакты</a></li>
+                        <li class="nav-item"><a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
+                        </li>
                     </ul>
                     <div class="navbar-btn d-flex flex-column gap-3 pt-4">
-                        <a href="tel:+79603111715" class="phone text-white text-decoration-none">+7 (960) 311-17-15</a>
+                        <a href="tel:+78432102828" class="phone text-white text-decoration-none">+7 (843) 210-28-28</a>
                         <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Войти
                         </button>
@@ -58,16 +156,16 @@
                     <ul
                         class="navbar-nav d-flex flex-column flex-lg-row gap-lg-4 flex-md-row gap-md-3 ms-lg-0 ms-md-0 ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#">Главная</a>
+                            <a class="nav-link text-white text-uppercase" href="index.html">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#">Меню</a>
+                            <a class="nav-link text-white text-uppercase" href="menu.html">Меню</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white text-uppercase" href="about.html">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white text-uppercase" href="#">Контакты</a>
+                            <a class="nav-link text-white text-uppercase" href="#contacts">Контакты</a>
                         </li>
                     </ul>
                 </div>
@@ -76,13 +174,12 @@
                 <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
             </a>
             <div class="d-flex align-items-center gap-lg-5 gap-md-4">
-                <a href="tel:+79603111715" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
-                    (960)
-                    311-17-15</a>
-                <a href="#" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">Войти</a>
-                <a href="#" class="icon ms-lg-0">
-                    <img src="assets/image/header/icon.svg" alt="">
+                <a href="tel:+78432102828" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
+                    (843) 210-28-28</a>
+                <button type="button" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none"
+                    data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
+                <a href="basket.html" class="icon ms-lg-0">
+                    <img src="assets/image/header/icon.svg" alt="Корзина">
                 </a>
             </div>
         </div>
@@ -149,7 +246,6 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="table-grid d-flex gap-4">
                         <div class="t-icon d-flex gap-5">
                             <a href="#" class="table-icon free" data-bs-toggle="modal" data-bs-target="#reviewModal">
@@ -200,7 +296,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="info-panel row gap-2">
                 <div class="p-info-card col-12 d-flex flex-column align-items-center">
                     <h5>01</h5>
@@ -219,7 +314,6 @@
                     <p>Количество гостей</p>
                 </div>
             </div>
-
             <div class="legend d-flex flex-wrap gap-3 gap-md-4 gap-lg-5">
                 <div class="free d-flex gap-2 gap-md-3 align-items-center">
                     <img src="assets/image/table/free.svg" alt="">
@@ -236,7 +330,6 @@
             </div>
         </div>
     </div>
-
     <div class="catalog container-xxl d-flex align-items-center justify-content-end">
         <a href="order.html" class="catalog-btn mt-5">Перейти к оплате</a>
     </div>
@@ -250,7 +343,7 @@
                 <p class="copyright">Copyright © 2025 Мусина Ралина Руслановна</p>
             </div>
             <div class="col-6 footer-links d-flex flex-column gap-3">
-                <a href="assets/documents/Политика конфиденциальности.pdf" download>Политика конфиденциальности</a>
+                <a href="assets/documents/Политика-конфиденциальности.pdf" download>Политика конфиденциальности</a>
                 <div class="links d-flex gap-3 justify-content-end align-items-center">
                     <a href="assets/documents/Аккредитация.pdf" download>Аккредитация</a>
                     <div class="vertical-divider"></div>
@@ -267,41 +360,40 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content text-light rounded-0">
                 <button type="button" class="btn-close btn-close-white modal-close-button" data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            <div class="modal-border p-5">
-                <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
-                    <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">БРОНИРОВАНИЕ СТОЛА</h5>
-                </div>
+                    aria-label="Close"></button>
+                <div class="modal-border p-5">
+                    <div class="modal-header p-0 mt-3 mb-5 d-flex justify-content-center">
+                        <h5 class="modal-title auth-modal-title text-center" id="reviewModalLabel">БРОНИРОВАНИЕ СТОЛА</h5>
+                    </div>
                     <div class="modal-body">
                         <form id="reviewForm">
                             <div class="form-input mb-3 row d-flex align-items-center">
-                                <label for="name"
+                                <label for="date"
                                     class="name col-sm-4 col-form-label border-right d-flex align-items-center">Выберите
                                     дату *</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="name" placeholder="Укажите дату"
+                                    <input type="text" class="form-control" id="date" placeholder="Укажите дату"
                                         required>
                                 </div>
                             </div>
                             <div class="form-input mb-3 row d-flex align-items-center">
-                                <label for="name"
+                                <label for="time"
                                     class="name col-sm-4 col-form-label border-right d-flex align-items-center">Выберите
                                     время *</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="name" placeholder="Укажите время"
+                                    <input type="text" class="form-control" id="time" placeholder="Укажите время"
                                         required>
                                 </div>
                             </div>
                             <div class="form-input mb-3 row d-flex align-items-center">
-                                <label for="name"
+                                <label for="guests"
                                     class="name col-sm-4 col-form-label border-right d-flex align-items-center">Количество
                                     гостей</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="name" placeholder="Укажите гостей"
+                                    <input type="text" class="form-control" id="guests" placeholder="Укажите гостей"
                                         required>
                                 </div>
                             </div>
-
                             <button type="submit"
                                 class="catalog-btn mt-3 w-100 d-flex justify-content-center">Подтвердить</button>
                         </form>
@@ -312,12 +404,9 @@
     </div>
 
     <!-- JAVASCRIPT -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
-
     <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

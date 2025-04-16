@@ -14,8 +14,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-static/" />
     <link rel="canonical" href="URL" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
 <body class="text-light">
@@ -32,21 +34,21 @@
                     </div>
                     <form class="modal-form">
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="email"
+                            <label for="loginEmail"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
                                 email</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
-                                    required>
+                                <input type="email" class="form-control" id="loginEmail"
+                                    placeholder="Укажите вашу почту" required>
                             </div>
                         </div>
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="password"
+                            <label for="loginPassword"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
                                 *</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
-                                    required>
+                                <input type="password" class="form-control" id="loginPassword"
+                                    placeholder="Укажите пароль" required>
                             </div>
                         </div>
                         <button type="submit" class="catalog-btn w-100 mt-3">Войти</button>
@@ -60,7 +62,6 @@
         </div>
     </div>
     <!-- AUTH end -->
-
     <!-- REG start -->
     <div class="modal fade index-modal" id="regModal" tabindex="-1" aria-labelledby="regModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -69,43 +70,43 @@
                     aria-label="Close"></button>
                 <div class="modal-border p-5">
                     <div class="modal-header p-0 mt-2 mb-5 d-flex justify-content-center">
-                        <h5 class="modal-title auth-modal-title text-center" id="loginModalLabel">РЕГИСТРАЦИЯ</h5>
+                        <h5 class="modal-title auth-modal-title text-center" id="regModalLabel">РЕГИСТРАЦИЯ</h5>
                     </div>
                     <form class="modal-form">
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="name"
+                            <label for="regName"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваше
                                 имя</label>
                             <div class="col-sm-8">
-                                <input type="email" class="form-control" id="name" placeholder="Укажите ваше имя"
+                                <input type="text" class="form-control" id="regName" placeholder="Укажите ваше имя"
                                     required>
                             </div>
                         </div>
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="email"
+                            <label for="regEmail"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Ваш
                                 email</label>
                             <div class="col-sm-6">
-                                <input type="email" class="form-control" id="email" placeholder="Укажите вашу почту"
+                                <input type="email" class="form-control" id="regEmail" placeholder="Укажите вашу почту"
                                     required>
                             </div>
                         </div>
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="password"
+                            <label for="regPassword"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Пароль
                                 *</label>
                             <div class="col-sm-6">
-                                <input type="password" class="form-control" id="password" placeholder="Укажите пароль"
-                                    required>
+                                <input type="password" class="form-control" id="regPassword"
+                                    placeholder="Укажите пароль" required>
                             </div>
                         </div>
                         <div class="form-input mb-3 row d-flex align-items-center form-index">
-                            <label for="password-2"
+                            <label for="regPasswordConfirm"
                                 class="name col-sm-4 col-form-label border-right d-flex align-items-center">Повтор
                                 пароля
                                 *</label>
                             <div class="col-sm-8">
-                                <input type="password" class="form-control" id="password"
+                                <input type="password" class="form-control" id="regPasswordConfirm"
                                     placeholder="Укажите повторный пароль" required>
                             </div>
                         </div>
@@ -116,7 +117,6 @@
         </div>
     </div>
     <!-- REG end -->
-
     <!-- header start -->
     <header class="py-4">
         <div class="container-xxl d-flex align-items-center justify-content-between">
@@ -124,12 +124,11 @@
                 data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2"
-                aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar2">
                 <div class="offcanvas-header">
                     <div class="navbar-logo">
                         <a href="#" class="logo">
-                            <img src="assets/image/logo/logo.svg" alt="">
+                            <img src="assets/image/logo/logo.svg" alt="Логотип Траттория">
                         </a>
                     </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
@@ -147,7 +146,7 @@
                         </li>
                     </ul>
                     <div class="navbar-btn d-flex flex-column gap-3 pt-4">
-                        <a href="tel:+79603111715" class="phone text-white text-decoration-none">+7 (960) 311-17-15</a>
+                        <a href="tel:+78432102828" class="phone text-white text-decoration-none">+7 (843) 210-28-28</a>
                         <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Войти
                         </button>
@@ -177,19 +176,17 @@
                 <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
             </a>
             <div class="d-flex align-items-center gap-lg-5 gap-md-4">
-                <a href="tel:+79603111715" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
-                    (960)
-                    311-17-15</a>
-                <a href="#" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">Войти</a>
+                <a href="tel:+78432102828" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
+                    (843) 210-28-28</a>
+                <button type="button" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none"
+                    data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
                 <a href="basket.html" class="icon ms-lg-0">
-                    <img src="assets/image/header/icon.svg" alt="">
+                    <img src="assets/image/header/icon.svg" alt="Корзина">
                 </a>
             </div>
         </div>
     </header>
     <!-- header end -->
-
     <!-- Основной контент -->
     <div class="one_product container-xxl mt-5" data-aos="fade-up" data-aos-duration="500">
         <div class="crumbs mb-5">
@@ -250,7 +247,6 @@
             </div>
         </div>
     </div>
-
     <!-- Отзывы -->
     <div class="rewards container-xxl my-200" id="rewards" data-aos="fade-up" data-aos-duration="500">
         <div class="rewards-head">
@@ -261,11 +257,9 @@
                 <div class="card-body">
                     <div class="mb-1 d-flex align-items-center mb-4">
                         <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
-
                         <div class="d-flex w-100 justify-content-between align-items-start">
                             <div class="card-head">
                                 <h5 class="m-0">Елизавета</h5>
-
                                 <div class="stars-date d-flex align-items-center mt-1">
                                     <div class="stars">
                                         <img src="assets/image/reviews/magic-star.svg" alt="">
@@ -276,18 +270,15 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="date m-0">
                                 <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="mt-3">
                         <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
                             просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
                     </div>
-
                     <div class="rewards-background mt-3">
                         <img src="assets/image/reviews/icon.svg" alt="">
                     </div>
@@ -297,11 +288,9 @@
                 <div class="card-body">
                     <div class="mb-1 d-flex align-items-center mb-4">
                         <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
-
                         <div class="d-flex w-100 justify-content-between align-items-start">
                             <div class="card-head">
                                 <h5 class="m-0">Елизавета</h5>
-
                                 <div class="stars-date d-flex align-items-center mt-1">
                                     <div class="stars">
                                         <img src="assets/image/reviews/magic-star.svg" alt="">
@@ -312,18 +301,15 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="date m-0">
                                 <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="mt-3">
                         <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
                             просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
                     </div>
-
                     <div class="rewards-background mt-3">
                         <img src="assets/image/reviews/icon.svg" alt="">
                     </div>
@@ -333,11 +319,9 @@
                 <div class="card-body">
                     <div class="mb-1 d-flex align-items-center mb-4">
                         <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
-
                         <div class="d-flex w-100 justify-content-between align-items-start">
                             <div class="card-head">
                                 <h5 class="m-0">Елизавета</h5>
-
                                 <div class="stars-date d-flex align-items-center mt-1">
                                     <div class="stars">
                                         <img src="assets/image/reviews/magic-star.svg" alt="">
@@ -348,18 +332,15 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="date m-0">
                                 <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="mt-3">
                         <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
                             просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
                     </div>
-
                     <div class="rewards-background mt-3">
                         <img src="assets/image/reviews/icon.svg" alt="">
                     </div>
@@ -371,7 +352,6 @@
                 отзыв</a>
         </div>
     </div>
-
     <!-- Footer -->
     <div class="container-xxl footer my-200" data-aos="fade-up" data-aos-duration="500">
         <div class="row d-flex align-items-center">
@@ -380,7 +360,7 @@
                 <p class="copyright">Copyright © 2025 Мусина Ралина Руслановна</p>
             </div>
             <div class="col-6 footer-links d-flex flex-column gap-3">
-                <a href="assets/documents/Политика конфиденциальности.pdf" download>Политика конфиденциальности</a>
+                <a href="assets/documents/Политика-конфиденциальности.pdf" download>Политика конфиденциальности</a>
                 <div class="links d-flex gap-3 justify-content-end align-items-center">
                     <a href="assets/documents/Аккредитация.pdf" download>Аккредитация</a>
                     <div class="vertical-divider"></div>
@@ -389,7 +369,6 @@
             </div>
         </div>
     </div>
-
     <!-- Модальное окно -->
     <div class="modal fade" id="reviewDishModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -398,19 +377,20 @@
                     aria-label="Close"></button>
                 <div class="modal-border">
                     <div class="modal-header p-0 mt-3 mb-3">
-                        <h5 class="modal-title auth-modal-title ps-3 text-white" id="loginModalLabel">Оставить отзыв о блюде</h5>
+                        <h5 class="modal-title auth-modal-title ps-3 text-white" id="reviewModalLabel">Оставить отзыв о блюде</h5>
                     </div>
                     <div class="modal-body">
                         <p class="mb-5 pt-0">Оставьте Ваш отзыв и поделитесь впечатлениями о блюде, чтобы мы могли улучшить качество обслуживания!</p>
                         <form id="reviewForm">
                             <div class="form-input mb-3 row d-flex align-items-center">
-                                <label for="rating"
+                                <label for="address"
                                     class="name col-sm-3 col-form-label border-right d-flex align-items-center">Блюдо</label>
                                 <div class="custom-select">
                                     <div
                                         class="selected-option-container col-10 col-md-11 d-flex align-items-center justify-content-between">
                                         <span class="selected-option">Выберите блюдо</span>
-                                        <span class="dropdown-arrow"><img src="assets/image/reviews/vector.svg" alt="" class="me-1"></span>
+                                        <span class="dropdown-arrow"><img src="assets/image/reviews/vector.svg" alt=""
+                                                class="me-1"></span>
                                     </div>
                                     <ul class="options">
                                         <li data-value="address1">Карпаччо</li>
@@ -421,8 +401,8 @@
                             <div class="form-input mb-3 row d-flex align-items-center">
                                 <label for="rating"
                                     class="name col-sm-3 col-form-label border-right d-flex align-items-center">Оценка</label>
-                                <div class="dish-stars d-flex align-items-center">
-                                    <div class="rating-stars d-flex gap-2 col-sm-9">
+                                <div class="dish-stars d-flex align-items-center col-sm-9">
+                                    <div class="rating-stars d-flex gap-2">
                                         <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
                                             data-index="0">
                                         <img src="assets/image/reviews/magic-star-2.svg" alt="Звезда" class="star-icon"
@@ -450,7 +430,7 @@
                                     class="name col-sm-3 col-form-label border-right border-bottom">Отзыв</label>
                                 <div class="form-textarea-col col-sm-9">
                                     <textarea class="form-control" id="review" rows="5"
-                                        placeholder="Вы можете добавить отзыв о блюде из ресторана «Траттория»"
+                                        placeholder="Вы можете добавить отзыв о блюде"
                                         required></textarea>
                                 </div>
                             </div>
@@ -469,14 +449,12 @@
             </div>
         </div>
     </div>
-
     <!-- JavaScript -->
     <script>
         document.querySelector('.custom-select').addEventListener('click', function () {
             const options = this.querySelector('.options');
             options.style.display = options.style.display === 'block' ? 'none' : 'block';
         });
-
         document.querySelectorAll('.options li').forEach(function (li) {
             li.addEventListener('click', function () {
                 const selectedOption = document.querySelector('.selected-option');
@@ -486,18 +464,15 @@
             });
         });
     </script>
-
     <script>
         // Модальное окно с отзывами
         document.addEventListener('DOMContentLoaded', function () {
             const stars = document.querySelectorAll('.star-icon');
             let selectedRating = null;
-
             if (!stars.length) {
                 console.error('Элементы с классом .star-icon не найдены.');
                 return;
             }
-
             stars.forEach((star, index) => {
                 star.addEventListener('mouseover', () => {
                     stars.forEach((s, i) => {
@@ -508,7 +483,6 @@
                         }
                     });
                 });
-
                 star.addEventListener('mouseout', () => {
                     stars.forEach((s, i) => {
                         if (i < selectedRating) {
@@ -518,7 +492,6 @@
                         }
                     });
                 });
-
                 star.addEventListener('click', () => {
                     selectedRating = index + 1;
                     console.log(`Выбранный рейтинг: ${selectedRating}`);
@@ -532,48 +505,37 @@
                 });
             });
         });
-
         // Обработчик отправки формы модального окна
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('reviewForm');
             const modal = document.getElementById('reviewDishModal');
-
             if (!form || !modal) {
                 console.error('Форма или модальное окно не найдены.');
                 return;
             }
-
             form.addEventListener('submit', function (event) {
                 event.preventDefault();
-
                 if (!form.checkValidity()) {
                     alert('Пожалуйста, заполните все обязательные поля.');
                     return;
                 }
-
-                const name = document.getElementById('name').value;
-                const review = document.getElementById('review').value;
+                const name = document.getElementById('reviewName').value;
+                const review = document.getElementById('reviewText').value;
                 const privacyCheckbox = document.getElementById('privacyCheckbox').checked;
-
                 if (!privacyCheckbox) {
                     alert('Необходимо согласиться с политикой конфиденциальности.');
                     return;
                 }
-
                 console.log('Имя:', name);
                 console.log('Отзыв:', review);
-
                 const bootstrapModal = bootstrap.Modal.getInstance(modal);
                 bootstrapModal.hide();
                 form.reset();
             });
         });
     </script>
-
-
-<!-- Подключение скрипта AOS -->
+    <!-- Подключение скрипта AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             AOS.init({
@@ -582,12 +544,10 @@
             });
         });
     </script>
-
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
