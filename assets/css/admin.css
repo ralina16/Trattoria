@@ -375,7 +375,7 @@ button,
 
 @media (max-width: 992px) {
     .table tr td {
-        border: none !important;
+        border: 1px solid #272727 !important;
     }
 
     .table thead {
@@ -388,7 +388,7 @@ button,
 
     .user .table td,
     .user .table th {
-        border: none !important;
+        border: 1px solid #272727 !important;
     }
 
     .dropdown-menu,
@@ -556,7 +556,7 @@ button,
 
     .col-sm-6 {
         flex: 0 0 auto;
-        width: 50%;
+        width: 35%;
     }
 }
 

@@ -506,7 +506,7 @@ h1 {
         font-size: 0.9em;
     }
 
-    .col-md-6 {
+    .banner .col-md-6 {
         flex: 1;
         max-width: 100%;
     }
@@ -588,7 +588,7 @@ h1 {
         flex-direction: column;
     }
 
-    .col-md-6 {
+    .banner .col-md-6 {
         flex: none;
         max-width: 100%;
         width: 100%;
@@ -2916,6 +2916,7 @@ textarea.form-control {
     max-height: 130px;
     max-width: 300px;
     overflow-y: auto;
+    z-index: 9999;
 }
 
 .options li {
@@ -5369,6 +5370,10 @@ table .btn-outline-light {
     font-family: 'Manrope',sans-serif;
 }
 
+.gradient .row>* {
+    max-width: 50% !important;
+}
+
 @media (max-width: 1200px) {
     .gradient-text h1 {
         font-size: 100px;
@@ -5422,7 +5427,7 @@ table .btn-outline-light {
 @media (min-width: 768px) {
     .account-cards .col-md-6 {
         flex: 0 0 auto;
-        width: 32%;
+        width: 30%;
     }
 
     .footer-modals .btn-outline-light {
@@ -5441,10 +5446,6 @@ table .btn-outline-light {
 }
 
 @media (max-width: 700px) {
-    .account-cards {
-        flex-direction: column !important;
-    }
-
     .text-title {
         font-size: 25px;
     }
@@ -5464,7 +5465,7 @@ table .btn-outline-light {
     }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 580px) {
     .gradient h1 {
         font-size: 25px;
     }
@@ -5496,6 +5497,11 @@ table .btn-outline-light {
 
     .gradient-text h1 {
         font-size: 40px;
+    }
+
+    .account-cards .col-md-6 {
+        flex: 0 0 auto;
+        max-width: 80% !important;
     }
 }
 
