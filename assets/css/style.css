@@ -3716,6 +3716,20 @@ table .btn-outline-light {
     border-color: #584E3D;
 }
 
+.controls .btn-outline-light {
+    background-color: transparent;
+    color: #584E3D;
+    border-color: #584E3D;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.controls .btn-outline-light:hover {
+    background-color: transparent !important;
+    color: #584E3D;
+    border-color: #584E3D;
+}
+
 .cart-container .catalog-btn:hover {
     background-color: none;
 }
