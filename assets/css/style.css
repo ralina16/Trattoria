@@ -1664,9 +1664,9 @@ h2 {
 }
 
 @media (max-width: 500px) {
-.date p {
-    font-size: 10px;
-}
+    .date p {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 426px) {
@@ -1692,7 +1692,7 @@ h2 {
     .rev-text {
         font-size: 13px;
     }
-    
+
     .date p {
         font-size: 9px;
     }
@@ -3278,10 +3278,6 @@ textarea.form-control {
         max-width: 100%;
     }
 
-    .modal-title {
-        font-size: 15px;
-    }
-
     .modal-body p {
         font-size: 10px;
     }
@@ -3291,10 +3287,10 @@ textarea.form-control {
         height: 10px;
     }
 
-        .form-textarea .form-control {
-            flex-wrap: wrap;
-            max-width: 160px;
-        }
+    .form-textarea .form-control {
+        flex-wrap: wrap;
+        max-width: 160px;
+    }
 
     .form-input ::placeholder,
     .form-textarea ::placeholder {
@@ -3342,9 +3338,9 @@ textarea.form-control {
 }
 
 @media (max-width: 397px) {
-.custom-select .col-10 {
-    width: 77% !important;
-}
+    .custom-select .col-10 {
+        width: 77% !important;
+    }
 }
 
 @media (max-width: 380px) {
@@ -3385,9 +3381,9 @@ textarea.form-control {
         max-width: 180px;
     }
 
-        .custom-select .col-10 {
-            width: 67% !important;
-        }
+    .custom-select .col-10 {
+        width: 67% !important;
+    }
 }
 
 
@@ -3732,6 +3728,23 @@ table .btn-outline-light {
 
 .cart-container .catalog-btn:hover {
     background-color: none;
+}
+
+/* Установка цвета текста для поля ввода даты */
+.form-input input[type="date"] {
+    color: #4a4a4a !important;
+    /* Цвет текста */
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+}
+
+/* Убираем системную иконку календаря (если это необходимо) */
+.form-input input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.form-input input[type="date"]::-moz-calendar-button {
+    display: none;
 }
 
 @media (max-width: 1200px) {
@@ -4101,11 +4114,11 @@ table .btn-outline-light {
 }
 
 .restaurant-card:hover {
-    border: 1px solid #ffffff95;
+    border: 1px solid #c3bcb355;
 }
 
 .restaurant-card.active {
-    border: 1px solid #fff;
+    border: 1px solid #f8d49e55;
 }
 
 .restaurant-card-image {
@@ -4290,8 +4303,8 @@ table .btn-outline-light {
 }
 
 .img-fluid.table-img:hover {
-    /* filter: brightness(0.7) contrast(0.9) sepia(0) saturate(0); */
-    filter: brightness(0.7) contrast(0.2) sepia(0.8) saturate(1.2);
+    filter: brightness(0.5) contrast(0.9) sepia(0.8) saturate(0);
+    /* filter: brightness(0.7) contrast(0.2) sepia(0.8) saturate(1.2); */
 }
 
 .t-blocks {
@@ -4305,6 +4318,14 @@ table .btn-outline-light {
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::-moz-calendar-button {
+    display: none;
 }
 
 .table-icon {
@@ -4613,9 +4634,21 @@ table .btn-outline-light {
     }
 }
 
+@media (max-width: 576px) {
+    .modal-body .form-control {
+        width: 50% !important;
+    }
+}
+
 @media (max-width: 550px) {
     .p-info-card {
         width: 48%;
+    }
+}
+
+@media (max-width: 515px) {
+    .modal-body .form-control {
+        width: 40% !important;
     }
 }
 
@@ -4654,6 +4687,12 @@ table .btn-outline-light {
     }
 }
 
+@media (max-width: 515px) {
+    .modal-body .form-control {
+        width: 35% !important;
+    }
+}
+
 @media (max-width: 420px) {
     .info-panel h5 {
         font-size: 16px;
@@ -4678,6 +4717,14 @@ table .btn-outline-light {
 
 .table-modal .catalog-btn {
     margin-top: 35px !important;
+}
+
+@media (max-width: 650px) {
+
+    .modal-body .form-input .name,
+    .form-textarea .name {
+        max-width: 150px;
+    }
 }
 
 @media (max-width: 580px) {
@@ -5091,7 +5138,7 @@ table .btn-outline-light {
     }
 
     .modal-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .modal-text {
@@ -5273,6 +5320,21 @@ table .btn-outline-light {
 
 .form-input input {
     font-size: 13px;
+    color: #919191;
+}
+
+.form-input input:focus,
+.form-input input:not(:placeholder-shown) {
+    color: #9c9c9c;
+}
+
+.form-textarea textarea {
+    font-size: 13px;
+    color: #9c9c9c;
+}
+
+.form-textarea textarea:focus,
+.form-textarea textarea:not(:placeholder-shown) {
     color: #9c9c9c;
 }
 
@@ -5381,7 +5443,7 @@ table .btn-outline-light {
 }
 
 .footer-modals .btn-outline-light {
-    font-family: 'Manrope',sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .gradient .row>* {
@@ -5476,6 +5538,14 @@ table .btn-outline-light {
 
     .gradient-text h1 {
         font-size: 60px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .order-block .form-input .name,
+    .form-textarea .name {
+        max-width: 130px;
     }
 }
 
