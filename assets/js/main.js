@@ -46,11 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const stars = document.querySelectorAll('.star-icon');
     let selectedRating = null;
 
-    if (!stars.length) {
-        console.error('Элементы с классом .star-icon не найдены.');
-        return;
-    }
-
     stars.forEach((star, index) => {
         star.addEventListener('mouseover', () => {
             stars.forEach((s, i) => {
