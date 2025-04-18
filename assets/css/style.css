@@ -370,7 +370,7 @@ input:-internal-autofill-selected {
         padding: 1rem 0.8rem !important;
     }
 
-    .modal-header {
+    .index-modal .modal-header {
         margin-bottom: 2rem !important;
     }
 }
@@ -984,6 +984,12 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+   .gaps {
+    margin-top: 100px !important;
+   }
+}
+
 @media (max-width: 606px) {
     .catalog .cat-cards .col-12:nth-child(n + 3) .card {
         display: none;
@@ -1145,10 +1151,6 @@ h2 {
     line-height: 1.6 !important;
     font-family: 'Manrope', sans-serif;
     letter-spacing: 0.03em;
-}
-
-.stat {
-    max-width: 150px;
 }
 
 .stat h3 {
@@ -1464,8 +1466,7 @@ h2 {
 
 /* gallery start */
 
-/* === SWIPER СТИЛИ === */
-
+/* SWIPER СТИЛИ */
 .swiper {
     position: relative;
     padding-bottom: 40px;
@@ -1626,6 +1627,20 @@ h2 {
     cursor: pointer;
 }
 
+.slider-container {
+    user-select: none; 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+}
+
+.slider-container * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 @media (max-width: 1300px) {
     .rewards .card {
         max-width: 31vw;
@@ -1659,7 +1674,7 @@ h2 {
     }
 
     .card-head h5 {
-        font-size: 20px;
+        font-size: 18px !important;
     }
 }
 
@@ -1799,7 +1814,6 @@ h2 {
 }
 
 @media (max-width: 768px) {
-
     h2,
     .contacts h2 {
         font-size: 2em;
@@ -1807,6 +1821,7 @@ h2 {
 
     .contacts h3 {
         font-size: 1em;
+        padding-bottom: 5px !important;
     }
 
     .contacts-block {
@@ -2537,12 +2552,6 @@ li.breadcrumb-item {
     .about-info p {
         font-size: 14px;
         max-width: 480px;
-    }
-
-    .about-img-block,
-    .world-map {
-        max-width: 100% !important;
-        height: auto;
     }
 
     .block h4 {
@@ -3716,7 +3725,7 @@ table .btn-outline-light {
     background-color: transparent;
     color: #584E3D;
     border-color: #584E3D;
-    font-size: 14px;
+    font-size: 11px;
     font-family: sans-serif;
 }
 
@@ -3730,15 +3739,12 @@ table .btn-outline-light {
     background-color: none;
 }
 
-/* Установка цвета текста для поля ввода даты */
 .form-input input[type="date"] {
     color: #4a4a4a !important;
-    /* Цвет текста */
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
 }
 
-/* Убираем системную иконку календаря (если это необходимо) */
 .form-input input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }

@@ -106,6 +106,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filterCards('all');
 });
+
+
+// Перелистывание отзывов
+document.addEventListener('DOMContentLoaded', () => {
+    const sliderContainer = document.querySelector('.slider-container');
+
+    const isLargeScreen = window.matchMedia('(min-width: 992px)').matches;
+
+    if (isLargeScreen) {
+        let isDragging = false;
+        let startX, scrollLeft;
+
+        sliderContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.pageX - sliderContainer.offsetLeft;
+            scrollLeft = sliderContainer.scrollLeft;
+        });
+
+        sliderContainer.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - sliderContainer.offsetLeft;
+            const walk = (x - startX) * 2; 
+            sliderContainer.scrollLeft = scrollLeft - walk;
+        });
+
+        sliderContainer.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        sliderContainer.addEventListener('mouseleave', () => {
+            isDragging = false;
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        const isLargeScreenNow = window.matchMedia('(min-width: 992px)').matches;
+        if (isLargeScreenNow) {
+            sliderContainer.style.overflowX = 'hidden'; 
+        } else {
+            sliderContainer.style.overflowX = 'auto'; 
+        }
+    });
+});
 // index end
 
 // about start
