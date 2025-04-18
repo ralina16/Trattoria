@@ -1627,6 +1627,10 @@ h2 {
     cursor: pointer;
 }
 
+.dropdown-arrow img{
+    width: 11px;
+}
+
 .slider-container {
     user-select: none; 
     -webkit-user-select: none; 
@@ -4640,7 +4644,7 @@ input[type="date"]::-moz-calendar-button {
     }
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .modal-body .form-control {
         width: 50% !important;
     }
@@ -4654,9 +4658,9 @@ input[type="date"]::-moz-calendar-button {
 
 @media (max-width: 515px) {
     .modal-body .form-control {
-        width: 40% !important;
+        width: 90% !important;
     }
-}
+} */
 
 @media (max-width: 480px) {
     .t-icon {
@@ -4693,11 +4697,11 @@ input[type="date"]::-moz-calendar-button {
     }
 }
 
-@media (max-width: 515px) {
+/* @media (max-width: 515px) {
     .modal-body .form-control {
         width: 35% !important;
     }
-}
+} */
 
 @media (max-width: 420px) {
     .info-panel h5 {
