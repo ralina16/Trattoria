@@ -1478,7 +1478,6 @@ h2 {
 
 .swiper-slide {
     flex-shrink: 0;
-    text-align: center;
 }
 
 .gallery .img-fluid {
@@ -1508,6 +1507,10 @@ h2 {
 
 .swiper-pagination-bullet-active {
     background-color: #FACE8D !important;
+}
+
+.swiper-slide {
+    cursor: grab;
 }
 
 @media (max-width: 768px) {
@@ -5552,7 +5555,6 @@ input[type="date"]::-moz-calendar-button {
 }
 
 @media (max-width: 640px) {
-
     .order-block .form-input .name,
     .form-textarea .name {
         max-width: 130px;
