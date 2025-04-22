@@ -148,7 +148,7 @@
                     <div class="navbar-btn d-flex flex-column gap-3 pt-4">
                         <a href="tel:+78432102828" class="phone text-white text-decoration-none">+7 (843) 210-28-28</a>
                         <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Войти
+                            Выйти
                         </button>
                     </div>
                 </div>
@@ -176,13 +176,16 @@
                 <h2 class="header-logo my-auto text-decoration-none pb-0">Траттория</h2>
             </a>
             <div class="d-flex align-items-center gap-lg-5 gap-md-4">
-                <a href="tel:+78432102828" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7
-                    (843) 210-28-28</a>
-                <button type="button" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none"
-                    data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
-                <a href="basket.html" class="icon ms-lg-0">
-                    <img src="assets/image/header/icon.svg" alt="Корзина">
-                </a>
+                <a href="tel:+78432102828" class="phone text-white text-decoration-none d-lg-block d-md-block d-none">+7 (843) 210-28-28</a>
+                <button type="button" class="btn text-white px-lg-4 px-md-3 d-lg-block d-md-block d-none" data-bs-toggle="modal" data-bs-target="#loginModal">Выйти</button>
+                <div class="header-icons d-flex gap-4">
+                    <a href="account.html" class="icon ms-lg-0">
+                        <img src="assets/image/header/people.svg" alt="Корзина" class="icon-acc">
+                    </a>
+                    <a href="basket.html" class="icon ms-lg-0">
+                        <img src="assets/image/header/icon.svg" alt="Корзина">
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -433,7 +436,7 @@
     <div class="my-200 gallery-container container-xxl gaps" data-aos="fade-up" data-aos-duration="500">
         <h2 class="text-center text-md-start">Фотогалерея</h2>
         <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper text-center">
                 <div class="swiper-slide">
                     <img src="assets/image/gallery/image-1.svg" alt="Фото 1" class="img-fluid">
                 </div>
@@ -483,185 +486,116 @@
     </script>
     <!-- gallery end -->
     <!-- reviews start -->
-    <div class="rewards container-xxl my-200 gaps" id="rewards" data-aos="fade-up" data-aos-duration="500">
+    <div class="rewards container-xxl my-200" id="rewards" data-aos="fade-up" data-aos-duration="500">
         <div class="rewards-head">
             <h2 class="text-center text-md-start">Отзывы</h2>
         </div>
-        <div class="swiper mySwiper mt-2">
-            <div class="swiper-wrapper">
+        <div class="slider-container mt-2">
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
 
-                <div class="swiper-slide">
-                    <div class="card rounded-0">
-                        <div class="card-body">
-                            <div class="mb-1 d-flex align-items-center mb-4">
-                                <img src="assets/image/reviews/image-1.svg" alt="Автор отзыва"
-                                    class="rounded-circle me-3">
-                                <div class="d-flex w-100 justify-content-between align-items-start">
-                                    <div class="card-head">
-                                        <h5 class="m-0">Елизавета</h5>
-                                        <div class="stars-date d-flex align-items-center mt-1">
-                                            <div class="stars">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date m-0">
-                                        <p class="m-0 p-0">06.04.25</p>
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и
-                                    тирамису просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
-                            </div>
-                            <div class="rewards-background mt-3">
-                                <img src="assets/image/reviews/icon.svg" alt="Иконка">
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="swiper-slide">
-                    <div class="card rounded-0">
-                        <div class="card-body">
-                            <div class="mb-1 d-flex align-items-center mb-4">
-                                <img src="assets/image/reviews/image-1.svg" alt="Автор отзыва"
-                                    class="rounded-circle me-3">
-                                <div class="d-flex w-100 justify-content-between align-items-start">
-                                    <div class="card-head">
-                                        <h5 class="m-0">Елизавета</h5>
-                                        <div class="stars-date d-flex align-items-center mt-1">
-                                            <div class="stars">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date m-0">
-                                        <p class="m-0 p-0 text-muted">06.04.25</p>
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
+                    </div>
+
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
+
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и
-                                    тирамису просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
-                            </div>
-                            <div class="rewards-background mt-3">
-                                <img src="assets/image/reviews/icon.svg" alt="Иконка">
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="swiper-slide">
-                    <div class="card rounded-0">
-                        <div class="card-body">
-                            <div class="mb-1 d-flex align-items-center mb-4">
-                                <img src="assets/image/reviews/image-1.svg" alt="Автор отзыва"
-                                    class="rounded-circle me-3">
-                                <div class="d-flex w-100 justify-content-between align-items-start">
-                                    <div class="card-head">
-                                        <h5 class="m-0">Елизавета</h5>
-                                        <div class="stars-date d-flex align-items-center mt-1">
-                                            <div class="stars">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date m-0">
-                                        <p class="m-0 p-0 text-muted">06.04.25</p>
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
+                    </div>
+
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="card rounded-0">
+                <div class="card-body">
+                    <div class="mb-1 d-flex align-items-center mb-4">
+                        <img src="assets/image/reviews/image-1.svg" alt="icon" class="rounded-circle me-3">
+
+                        <div class="d-flex w-100 justify-content-between align-items-start">
+                            <div class="card-head">
+                                <h5 class="m-0">Елизавета</h5>
+
+                                <div class="stars-date d-flex align-items-center mt-1">
+                                    <div class="stars">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
+                                        <img src="assets/image/reviews/magic-star.svg" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-3">
-                                <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и
-                                    тирамису просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
-                            </div>
-                            <div class="rewards-background mt-3">
-                                <img src="assets/image/reviews/icon.svg" alt="Иконка">
+
+                            <div class="date m-0">
+                                <p class="m-0 p-0 text-muted">06.04.25</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="swiper-slide">
-                    <div class="card rounded-0">
-                        <div class="card-body">
-                            <div class="mb-1 d-flex align-items-center mb-4">
-                                <img src="assets/image/reviews/image-1.svg" alt="Автор отзыва"
-                                    class="rounded-circle me-3">
-                                <div class="d-flex w-100 justify-content-between align-items-start">
-                                    <div class="card-head">
-                                        <h5 class="m-0">Елизавета</h5>
-                                        <div class="stars-date d-flex align-items-center mt-1">
-                                            <div class="stars">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date m-0">
-                                        <p class="m-0 p-0 text-muted">06.04.25</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и
-                                    тирамису просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
-                            </div>
-                            <div class="rewards-background mt-3">
-                                <img src="assets/image/reviews/icon.svg" alt="Иконка">
-                            </div>
-                        </div>
+                    <div class="mt-3">
+                        <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и тирамису
+                            просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
                     </div>
-                </div>
 
-                <div class="swiper-slide">
-                    <div class="card rounded-0">
-                        <div class="card-body">
-                            <div class="mb-1 d-flex align-items-center mb-4">
-                                <img src="assets/image/reviews/image-1.svg" alt="Автор отзыва"
-                                    class="rounded-circle me-3">
-                                <div class="d-flex w-100 justify-content-between align-items-start">
-                                    <div class="card-head">
-                                        <h5 class="m-0">Елизавета</h5>
-                                        <div class="stars-date d-flex align-items-center mt-1">
-                                            <div class="stars">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                                <img src="assets/image/reviews/magic-star.svg" alt="Звезда">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="date m-0">
-                                        <p class="m-0 p-0 text-muted">06.04.25</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <p class="rev-text">Прекрасное место с уютной атмосферой! Паста с морепродуктами и
-                                    тирамису просто великолепны. Вежливый персонал, обязательно вернёмся!</p>
-                            </div>
-                            <div class="rewards-background mt-3">
-                                <img src="assets/image/reviews/icon.svg" alt="Иконка">
-                            </div>
-                        </div>
+                    <div class="rewards-background mt-3">
+                        <img src="assets/image/reviews/icon.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -670,26 +604,6 @@
             <a href="#" class="catalog-btn mt-5" data-bs-toggle="modal" data-bs-target="#reviewModal">Оставить отзыв</a>
         </div>
     </div>
-    <script>
-        const reviewsSwiper = new Swiper(".mySwiper", {
-            loop: true,
-            spaceBetween: 30,
-            slidesPerView: 3,
-            speed: 600,
-            effect: "slide",
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-    </script>
     <!-- reviews end -->
     <!-- contacts start -->
     <div class="contacts container-xxl my-200 gaps" data-aos="fade-up" data-aos-duration="500" id="contacts">
@@ -835,8 +749,9 @@
                                     <div
                                         class="selected-option-container col-10 col-md-11 d-flex align-items-center justify-content-between">
                                         <span class="selected-option">Выберите адрес</span>
-                                        <span class="dropdown-arrow"><img src="assets/image/reviews/down.svg" alt=""
-                                                class="me-1"></span>
+                                        <span class="dropdown-arrow d-none d-md-inline">
+                                            <img src="assets/image/reviews/down.svg" alt="" class="me-1">
+                                        </span>
                                     </div>
                                     <ul class="options">
                                         <li data-value="address1">ул. Проспект Ямашева, д. 76</li>
