@@ -293,7 +293,7 @@ input:-internal-autofill-selected {
     }
 
     .nav-item a {
-        font-size: 0.8em;
+        font-size: 0.8em !important;
     }
 
     .phone {
@@ -315,7 +315,7 @@ input:-internal-autofill-selected {
     }
 
     .nav-item a {
-        font-size: 0.6em;
+        font-size: 0.6em !important;
     }
 
     .phone {
@@ -373,6 +373,11 @@ input:-internal-autofill-selected {
     .index-modal .modal-header {
         margin-bottom: 2rem !important;
     }
+}
+
+.icon-acc {
+    width: 20px; 
+    height: 18px !important;
 }
 
 /* header end */
@@ -5244,7 +5249,7 @@ input[type="date"]::-moz-calendar-button {
     font-size: 30px;
 }
 
-.card {
+.gradient .card {
     max-width: 295px;
     border: none !important;
 }
